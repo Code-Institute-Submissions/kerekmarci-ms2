@@ -1,45 +1,141 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Memory Game - Milestone Project 2
 
-Welcome USER_NAME,
+## View live project here: [Gym website](https://kerekmarci.github.io/ms2/)
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+This website for created as my 2nd Milestone Project at the Code Institute. 
+The website will showcase the languages and tools learned so far, which are HTML5, CSS3 and JavaScript.
 
-## Gitpod Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
 
-`python3 -m http.server`
+---
 
-A blue button should appear to click: *Make Public*,
+## Description
 
-Another blue button should appear to click: *Open Browser*.
+xxx
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+---
 
-A blue button should appear to click: *Make Public*,
+## User Experience
 
-Another blue button should appear to click: *Open Browser*.
+xxx
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### Strategy
 
-## Updates Since The Instructional Video
+xxx
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+Demography:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+xxx
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+User stories:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+xxx
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Business goals: 
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+xxx
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Scope
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+xxx
 
---------
+### Structure
 
-Happy coding!
+xxx
+
+#### Main page: 
+
+xxx
+
+#### Other pages:
+
+xxx
+
+### Skeleton
+
+The skeleton of the website is available in the below wireframes, for both desktop and mobile view:
+
+**Desktop wireframes**
+
+
+
+**Mobile wireframes**
+
+
+
+### Surface
+
+* **Theme:**
+xxxx
+
+* **Colours:**
+xxx
+
+
+The colours in a pallette can be seen here:
+
+Colour palette 
+
+
+
+* **Typography:**
+
+xxx
+
+
+---
+
+## Features
+
+Below is the overview of the main features of the website:
+
+### Feature 1
+
+xxx
+
+### Feature 2
+
+xxx
+
+---
+
+## Technologies used
+
+### Languages
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Libraries
+
+* Balsamiq: an industry standard low-fidelity wireframing tool
+* Google Fonts: for providing stylish fonts across the website
+
+### Version control
+
+* Github: is used to store all codes and host the website 
+* Gitpod: is used as a IDE and to push code to Github
+
+---
+
+## Testing
+
+xxx
+
+### Testing user stories
+
+1. As a user, I ...
+
+### Validation
+
+* Jigsaw 
+* W3C for HTML
+
+---
+
+## Deployment
+
+The website was deployed to *GitHub* that is hosting the site, and is available to view at https://kerekmarci.github.io/ms2/ \
+To create a local clone, open Git Bash, type: *git clone https://github.com/kerekmarci/ms2.git* 
+
