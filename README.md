@@ -1,6 +1,6 @@
 # Memory Game - Milestone Project 2
 
-## View live project here: [Gym website](https://kerekmarci.github.io/ms2/)
+## View live project here: [Memory game](https://kerekmarci.github.io/ms2/)
 
 This website for created as my 2nd Milestone Project at the Code Institute. 
 The website will showcase the languages and tools learned so far, which are HTML5, CSS3 and JavaScript.
