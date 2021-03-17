@@ -1,0 +1,28 @@
+body {
+    background: #4c67ff;    
+    display: flex;
+    height: 100vh;
+}
+
+#memory-game {
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: calc(16% - 10px);
+    height: calc(30% - 10px);
+    position: relative;    
+    margin: 5px;
+}
+
+.front-face,
+.back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
