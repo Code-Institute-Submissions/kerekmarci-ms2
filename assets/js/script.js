@@ -9,6 +9,7 @@ const frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lad
 let level;
 let gameCards;
 let gameArea = document.getElementById('memory-game-area');
+let matchCounter; // this will count the number of matching pairs during the game
 
 document.getElementById("easy").addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");  
@@ -36,16 +37,19 @@ function createLevel() {
             numberOfCards = 12;
             chooseRandom(frontFace, 6);
             gameArea.style.width = '600px';
+            document.getElementById('game-level').innerHTML = level;
             break;
         case 'medium': 
             numberOfCards = 20;
             chooseRandom(frontFace, 12);  
-            gameArea.style.width = '700px';          
+            gameArea.style.width = '700px'; 
+            document.getElementById('game-level').innerHTML = level;         
             break;
         case 'hard':
             numberOfCards = 30;
             chooseRandom(frontFace, 15);
             gameArea.style.width = '800px'; 
+            document.getElementById('game-level').innerHTML = level;
             break;
     } 
 }
@@ -70,6 +74,7 @@ const chooseRandom = (frontFace, num = 1) => {
 function displayCards() {            
     
     let card = "";
+    matchCounter = 0;
 
     for (let i = 0; i < numberOfCards; i++) {        
         let text = `
@@ -121,6 +126,8 @@ function checkForMatch() {
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
     secondCard.removeEventListener('click', flipCard);
+    matchCounter++;
+    document.getElementById('match-counter').innerHTML = matchCounter;
     resetBoard();
 }
 
