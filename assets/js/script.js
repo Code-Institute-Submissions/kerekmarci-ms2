@@ -8,6 +8,7 @@ let numberOfCards; // dependent on the level, this will determine how many cards
 const frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo']; 
 let level;
 let gameCards;
+let gameArea = document.getElementById('memory-game-area');
 
 document.getElementById("easy").addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");  
@@ -34,20 +35,23 @@ function createLevel() {
         case 'easy':
             numberOfCards = 12;
             chooseRandom(frontFace, 6);
+            gameArea.style.width = '600px';
             break;
         case 'medium': 
             numberOfCards = 20;
-            chooseRandom(frontFace, 12);            
+            chooseRandom(frontFace, 12);  
+            gameArea.style.width = '700px';          
             break;
         case 'hard':
             numberOfCards = 30;
             chooseRandom(frontFace, 15);
+            gameArea.style.width = '800px'; 
             break;
     } 
 }
 
 // getting random cards from frontFace array
-// this script was available at https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array (visited: 18/03/2021)
+// this logic was available at https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array (visited: 18/03/2021)
 const chooseRandom = (frontFace, num = 1) => { 
     gameCards = [];  
     for (let i = 0; i < num;) {
@@ -63,9 +67,8 @@ const chooseRandom = (frontFace, num = 1) => {
 };
 
 // This function displays the correct amount of cards based on easy/medium/hard level 
-function displayCards() {     
-       
-    let gameArea = document.getElementById('memory-game-area');
+function displayCards() {            
+    
     let card = "";
 
     for (let i = 0; i < numberOfCards; i++) {        
