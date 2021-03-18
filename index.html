@@ -7,7 +7,17 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <h1>Welcome to the Memory game</h1>
+
+    <h2 class="center">Select your level</h2>
+
+    <div class="center">
+        <a href="game.html"><button id="easy" onclick="sessionStorage.setItem('gameLevel', 'easy')">Easy</button></a>
+        <a href="game.html"><button id="medium" onclick="sessionStorage.setItem('gameLevel', 'medium')">Medium</button></a>
+        <a href="game.html"><button id="hard" onclick="sessionStorage.setItem('gameLevel', 'hard')">Hard</button></a>
+    </div>
     
+
     <script src="assets/js/script.js"></script>
 </body>
 </html>
