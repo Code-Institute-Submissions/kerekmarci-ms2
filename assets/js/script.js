@@ -4,20 +4,38 @@ let isFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false; // if it's not a match, this will lock the board until setTimeout completes
 let numberOfCards; // dependent on the level, this will determine how many cards will be generated
+let frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo'];
 
-// setting values based on the game level selected
-function gameLevel(gameLevel) {
-    switch (gameLevel) {
-        case easy:
+document.getElementById("easy").addEventListener("click", function() {
+    sessionStorage.setItem("gameLevel", "easy");  
+    buildCards();
+});
+
+document.getElementById("medium").addEventListener("click", function() {
+    sessionStorage.setItem("gameLevel", "medium");   
+    buildCards(); 
+});
+
+document.getElementById("hard").addEventListener("click", function() {
+    sessionStorage.setItem("gameLevel", "hard"); 
+    buildCards();   
+});
+
+
+function buildCards() { 
+    let level = sessionStorage.getItem("gameLevel");
+    switch (level) {
+        case 'easy':
             numberOfCards = 12;
             break;
-        case medium: 
+        case 'medium': 
             numberOfCards = 20;
             break;
-        case hard:
+        case 'hard':
             numberOfCards = 30;
             break;
-    }
+    }   
+    console.log(level);
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
