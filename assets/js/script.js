@@ -34,8 +34,24 @@ function buildCards() {
         case 'hard':
             numberOfCards = 30;
             break;
+    } 
+
+    let gameArea = document.getElementById('memory-game-area');
+
+    let card = "";
+
+    for (let i = 1; i < numberOfCards; i++) {        
+        let text = `
+            <div class="card" data-card="${frontFace[i]}">
+                <img src="assets/images/${frontFace[i]}.png" class="front-face" alt="${frontFace[i]}">
+                <img src="assets/images/back.png" class="back-face" alt="Back of card">  
+            </div> 
+        `
+        card += text;        
     }   
-    console.log(level);
+
+    gameArea.innerHTML = card;
+    
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
