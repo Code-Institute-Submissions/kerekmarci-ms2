@@ -3,6 +3,22 @@ const cards = document.querySelectorAll('.card');
 let isFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false; // if it's not a match, this will lock the board until setTimeout completes
+let numberOfCards; // dependent on the level, this will determine how many cards will be generated
+
+// setting values based on the game level selected
+function gameLevel(gameLevel) {
+    switch (gameLevel) {
+        case easy:
+            numberOfCards = 12;
+            break;
+        case medium: 
+            numberOfCards = 20;
+            break;
+        case hard:
+            numberOfCards = 30;
+            break;
+    }
+}
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
