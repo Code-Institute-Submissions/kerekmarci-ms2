@@ -91,6 +91,7 @@ function displayCards() {
     cards.forEach(card => card.addEventListener('click', flipCard)); 
     
     shuffle();
+    start(); // start timer
 }
 
 function flipCard() {
@@ -151,3 +152,23 @@ function shuffle() {
         card.style.order = randomPos;
     });
 };
+
+// *** TIMER ***
+
+var s = 1;
+var m = 0;
+var timer;
+var stopWatch = document.getElementById('timer');
+
+function start() {
+    timer = setInterval(run, 1000);
+}
+
+function run() {
+    stopWatch.textContent = m + ":" + (s < 10 ? "0" + s : s);   
+    s++ 
+    if (s == 60) {
+        s = 0;
+        m++;
+    }
+}
