@@ -1,24 +1,43 @@
 body {
-    background: #4c67ff;    
-    display: flex;
-    height: 100vh;
+    background: #aec5e0; 
 }
 
-#memory-game {
-    width: 1200px;
-    height: 800px;
+h1 {
+    color: red;
+    text-align: center;  
+}
+
+.center {
+    text-align: center;
+}
+
+#score-area {
+    text-align: center;
+}
+
+#controls {
+    text-align: center;
+}
+
+#new-game,
+#home {
+    display: inline-block;
+}
+
+#memory-game-area {
+    width: 800px;
+    height: 80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
 
 .card {
-    width: calc(16% - 10px);
-    height: calc(30% - 10px);
+    width: 120px;
+    height: 150px;
     position: relative;    
-    margin: 5px;
-    transform: scale(1);
-    transform-style: preserve-3d;
+    margin: 5px;    
+    transform-style: preserve-3d;    
 }
 
 .card.flip {
