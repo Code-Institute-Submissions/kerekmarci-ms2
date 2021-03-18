@@ -91,7 +91,7 @@ function displayCards() {
     cards.forEach(card => card.addEventListener('click', flipCard)); 
     
     shuffle();
-    start(); // start timer
+    startTimer(); // start timer
 }
 
 function flipCard() {
@@ -129,6 +129,12 @@ function disableCards() {
     secondCard.removeEventListener('click', flipCard);
     matchCounter++;
     document.getElementById('match-counter').innerHTML = matchCounter;
+    if (matchCounter === numberOfCards / 2 ) {
+        setTimeout(function() {
+            alert('WIN!');
+        }, 1500);
+        stopTimer();
+    }
     resetBoard();
 }
 
@@ -155,20 +161,29 @@ function shuffle() {
 
 // *** TIMER ***
 
-var s = 1;
-var m = 0;
+var s;
+var m;
 var timer;
 var stopWatch = document.getElementById('timer');
 
-function start() {
-    timer = setInterval(run, 1000);
+function startTimer() {
+    s = 1;
+    m = 0;
+    if (!timer) {
+        timer = setInterval(runTimer, 1000);
+    }    
 }
 
-function run() {
+function runTimer() {
     stopWatch.textContent = m + ":" + (s < 10 ? "0" + s : s);   
     s++ 
     if (s == 60) {
         s = 0;
         m++;
     }
+}
+
+function stopTimer() {
+    clearInterval(timer);    
+    timer = false;
 }
