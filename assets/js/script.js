@@ -55,3 +55,11 @@ function resetBoard() {
     [isFlippedCard, lockBoard] = [false, false];
     [firstCard, secondCard] = [null, null];    
 }
+
+// Shuffle the cards = assigning random position with IIFE
+(function shuffle() {
+    cards.forEach(function(card) {
+        let randomPos = Math.floor(Math.random() * 30);
+        card.style.order = randomPos;
+    });
+})();
