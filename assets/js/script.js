@@ -1,60 +1,84 @@
-const cards = document.querySelectorAll('.card');
-
+var cards;
 let isFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false; // if it's not a match, this will lock the board until setTimeout completes
 let numberOfCards; // dependent on the level, this will determine how many cards will be generated
-let frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo'];
+
+// frontFace array contains all available card faces, however, not all of them are used in easy/medium games
+const frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo']; 
+let level;
 
 document.getElementById("easy").addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");  
-    buildCards();
+    createLevel();
+    displayCards();
 });
 
 document.getElementById("medium").addEventListener("click", function() {
-    sessionStorage.setItem("gameLevel", "medium");   
-    buildCards(); 
+    sessionStorage.setItem("gameLevel", "medium");  
+    createLevel(); 
+    displayCards(); 
 });
 
 document.getElementById("hard").addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "hard"); 
-    buildCards();   
+    createLevel();
+    displayCards();   
 });
 
-
-function buildCards() { 
-    let level = sessionStorage.getItem("gameLevel");
+// This will establish the user level: easy/medium/hard
+function createLevel() {
+    level = sessionStorage.getItem("gameLevel");
     switch (level) {
         case 'easy':
             numberOfCards = 12;
+            console.log(chooseRandom(frontFace, 6));
             break;
         case 'medium': 
             numberOfCards = 20;
+            console.log(chooseRandom(frontFace, 12));            
             break;
         case 'hard':
             numberOfCards = 30;
             break;
     } 
+}
+
+// getting random cards from frontFace array for easy and medium levels
+// this script was available at https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array (visited: 18/03/2021)
+const chooseRandom = (frontFace, num = 1) => { 
+   const gameCards = [];  
+   for (let i = 0; i < num;) {
+      const random = Math.floor(Math.random() * frontFace.length);
+      if (gameCards.indexOf(frontFace[random]) !== -1) {
+         continue;
+      };
+      gameCards.push(frontFace[random]);      
+      i++;
+   };
+   return gameCards;
+};
+
+// This function displays the correct amount of cards based on easy/medium/hard level 
+function displayCards() {     
 
     let gameArea = document.getElementById('memory-game-area');
-
     let card = "";
 
-    for (let i = 1; i < numberOfCards; i++) {        
+    for (let i = 0; i < numberOfCards; i++) {        
         let text = `
             <div class="card" data-card="${frontFace[i]}">
                 <img src="assets/images/${frontFace[i]}.png" class="front-face" alt="${frontFace[i]}">
                 <img src="assets/images/back.png" class="back-face" alt="Back of card">  
             </div> 
         `
-        card += text;        
+        card += text;                
     }   
 
-    gameArea.innerHTML = card;
-    
+    gameArea.innerHTML = card;     
+    cards = document.querySelectorAll('.card');   
+    cards.forEach(card => card.addEventListener('click', flipCard)); 
 }
-
-cards.forEach(card => card.addEventListener('click', flipCard));
 
 function flipCard() {
     if (lockBoard) return;
