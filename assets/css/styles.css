@@ -1,5 +1,7 @@
 body {
     background: #aec5e0; 
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -24,21 +26,20 @@ h1 {
     display: inline-block;
 }
 
-#memory-game-area {
-    width: 800px;
-    height: 80%;
+#memory-game-area {    
+    max-width: 800px;       
     margin: auto;    
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;    
+    justify-content: center;          
 }
 
-.card {
-    width: 120px;
-    height: 150px;
+.card {       
     position: relative;    
     margin: 5px;    
-    transform-style: preserve-3d;    
+    transform-style: preserve-3d;  
+    margin: 5px;
+    height: 100px;
 }
 
 .card.flip {
@@ -83,4 +84,27 @@ h1 {
     top: 50%;
     right: 5px;
     transform: translateY(-50%);    
+}
+
+/* ---------- MEDIA QUEIRY ---------- */
+
+@media only screen and (max-width: 576px) {
+  .card {
+    height: 75px;
+    width: 60px;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 991px) {
+  .card {
+    height: 112.5px;
+    width: 90px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .card {
+    height: 150px;
+    width: 120px;
+  }
 }

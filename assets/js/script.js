@@ -36,21 +36,21 @@ function createLevel() {
     switch (level) {
         case 'easy':
             numberOfCards = 12;
-            chooseRandom(frontFace, 6);
-            gameArea.style.width = '600px';
+            chooseRandom(frontFace, 6); 
+            gameArea.style.width = '600px';          
             document.getElementById('game-level').innerHTML = level;
             break;
         case 'medium': 
             numberOfCards = 20;
             chooseRandom(frontFace, 12);  
-            gameArea.style.width = '700px'; 
-            document.getElementById('game-level').innerHTML = level;         
+            gameArea.style.width = '700px';          
+            document.getElementById('game-level').innerHTML = level;                    
             break;
         case 'hard':
             numberOfCards = 30;
-            chooseRandom(frontFace, 15);
-            gameArea.style.width = '800px'; 
-            document.getElementById('game-level').innerHTML = level;
+            chooseRandom(frontFace, 15);         
+            gameArea.style.width = '800px';    
+            document.getElementById('game-level').innerHTML = level;             
             break;
     } 
 }
@@ -94,7 +94,7 @@ function displayCards() {
     cards.forEach(card => card.addEventListener('click', flipCard)); 
     
     shuffle();
-    startTimer(); // start timer
+    startTimer(); 
 }
 
 function flipCard() {
