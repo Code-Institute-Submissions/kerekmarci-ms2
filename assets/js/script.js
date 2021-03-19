@@ -10,6 +10,7 @@ let level;
 let gameCards;
 let gameArea = document.getElementById('memory-game-area');
 let matchCounter; // this will count the number of matching pairs during the game
+const progressBar = document.querySelector('#progress-bar');
 
 document.getElementById("easy").addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");  
@@ -75,6 +76,8 @@ function displayCards() {
     
     let card = "";
     matchCounter = 0;
+    document.getElementById('match-counter').innerHTML = 0;
+    updateProgressBar(progressBar, 0);
 
     for (let i = 0; i < numberOfCards; i++) {        
         let text = `
@@ -117,6 +120,15 @@ function flipCard() {
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
         // it's a match
+        matchCounter++;
+        document.getElementById('match-counter').innerHTML = matchCounter; 
+        updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);       
+        if (matchCounter === numberOfCards / 2 ) {
+            setTimeout(function() {
+                alert('WIN!');
+            }, 1500);
+            stopTimer();
+        }        
         disableCards();    
     } else {
         // it's not a match  
@@ -126,15 +138,7 @@ function checkForMatch() {
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);
-    matchCounter++;
-    document.getElementById('match-counter').innerHTML = matchCounter;
-    if (matchCounter === numberOfCards / 2 ) {
-        setTimeout(function() {
-            alert('WIN!');
-        }, 1500);
-        stopTimer();
-    }
+    secondCard.removeEventListener('click', flipCard);    
     resetBoard();
 }
 
@@ -159,7 +163,7 @@ function shuffle() {
     });
 };
 
-// *** TIMER ***
+// ******* TIMER *******
 
 var s;
 var m;
@@ -186,4 +190,12 @@ function runTimer() {
 function stopTimer() {
     clearInterval(timer);    
     timer = false;
+}
+
+// ******* PROGRESS BAR *******
+
+function updateProgressBar(pBar, value) {
+    value = Math.round(value);
+    pBar.querySelector('.progress-fill').style.width = `${value}%`;
+    pBar.querySelector('.progress-text').textContent = `${value}%`;
 }
