@@ -120,10 +120,6 @@ User will be put in the leaderboard based in his/her ranking compared to other u
 
 User will be able to provide feedback on the game and form will be sent using EmailJS. There are various options available, fields, ranges and radio buttons.
 
-### Feature 2
-
-xxx
-
 ---
 
 ## Technologies used
