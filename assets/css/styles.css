@@ -13,6 +13,16 @@ h1 {
     text-align: center;
 }
 
+hr {
+    width: 150px;
+    border: 1px solid rgb(138, 76, 76);
+}
+
+#landing-page-main {
+    max-width: 600px;
+    margin: auto;
+}
+
 #score-area {
     text-align: center;
 }
