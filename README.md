@@ -89,9 +89,36 @@ xxx
 
 Below is the overview of the main features of the website:
 
-### Feature 1
+### Levels
 
-xxx
+Player can choose among 3 levels and the number of cards will be displayed accordingly:
+ * Easy: 12 cards
+ * Medium: 20 cards 
+ * Hard: 30 cards
+
+### Aminated cards
+
+A pleasant, user-friendly animation is played when cards are flipped.
+
+### Counter
+
+The counter will count the time passed since the start of the game. 
+
+### Progress bar
+
+A colourful progress bar is shown to display the actual progress of the user within the game, displayed numerically in percentage as well as visually in the bar.
+
+### Victory pop-up
+
+In case of a victory (all pairs found), a window pops up with the quick stats. Option for the user to input username and see his/her position on the leaderboard.
+
+### Leaderboard (high scores display)
+
+User will be put in the leaderboard based in his/her ranking compared to other users.
+
+### Feedback form
+
+User will be able to provide feedback on the game and form will be sent using EmailJS. There are various options available, fields, ranges and radio buttons.
 
 ### Feature 2
 
