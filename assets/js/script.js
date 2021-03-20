@@ -37,19 +37,19 @@ function createLevel() {
         case 'easy':
             numberOfCards = 12;
             chooseRandom(frontFace, 6); 
-            gameArea.style.width = '600px';            
+            // gameArea.style.width = '600px';          
             document.getElementById('game-level').innerHTML = level;
             break;
         case 'medium': 
             numberOfCards = 24;
             chooseRandom(frontFace, 12);  
-            gameArea.style.width = '700px';              
+            // gameArea.style.width = '700px';              
             document.getElementById('game-level').innerHTML = level;                    
             break;
         case 'hard':
             numberOfCards = 36;
             chooseRandom(frontFace, 18);         
-            gameArea.style.width = '800px';               
+            // gameArea.style.width = '700px';               
             document.getElementById('game-level').innerHTML = level;             
             break;
     } 
