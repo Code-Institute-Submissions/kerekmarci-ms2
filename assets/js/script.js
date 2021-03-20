@@ -9,6 +9,7 @@ const frontFace = ['barkas', 'beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'j
 let level;
 let gameCards;
 let gameArea = document.getElementById('memory-game-area');
+let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
 
@@ -36,20 +37,17 @@ function createLevel() {
     switch (level) {
         case 'easy':
             numberOfCards = 12;
-            chooseRandom(frontFace, 6); 
-            // gameArea.style.width = '600px';          
+            chooseRandom(frontFace, 6);                   
             document.getElementById('game-level').innerHTML = level;
             break;
         case 'medium': 
             numberOfCards = 24;
-            chooseRandom(frontFace, 12);  
-            // gameArea.style.width = '700px';              
+            chooseRandom(frontFace, 12);                          
             document.getElementById('game-level').innerHTML = level;                    
             break;
         case 'hard':
             numberOfCards = 36;
-            chooseRandom(frontFace, 18);         
-            // gameArea.style.width = '700px';               
+            chooseRandom(frontFace, 18);       
             document.getElementById('game-level').innerHTML = level;             
             break;
     } 
@@ -76,6 +74,8 @@ function displayCards() {
     
     let card = "";
     matchCounter = 0;
+    moveCounter = 0;
+    document.getElementById('move-counter').innerHTML = 0;
     document.getElementById('match-counter').innerHTML = 0;
     updateProgressBar(progressBar, 0);
 
@@ -112,7 +112,8 @@ function flipCard() {
         // second click
         secondCard = this;
         isFlippedCard = false;     
-        
+        moveCounter++;
+        document.getElementById('move-counter').innerHTML = moveCounter;
         checkForMatch();  
     }    
 
