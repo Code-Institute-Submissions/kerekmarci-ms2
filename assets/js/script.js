@@ -5,7 +5,7 @@ let lockBoard = false; // if it's not a match, this will lock the board until se
 let numberOfCards; // dependent on the level, this will determine how many cards will be generated
 
 // frontFace array contains all available card faces, however, not all of them are used in easy/medium games
-const frontFace = ['beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo']; 
+const frontFace = ['barkas', 'beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo', 'wartburg', 'zaporozsec']; 
 let level;
 let gameCards;
 let gameArea = document.getElementById('memory-game-area');
@@ -37,19 +37,19 @@ function createLevel() {
         case 'easy':
             numberOfCards = 12;
             chooseRandom(frontFace, 6); 
-            gameArea.style.width = '600px';          
+            gameArea.style.width = '600px';            
             document.getElementById('game-level').innerHTML = level;
             break;
         case 'medium': 
-            numberOfCards = 20;
+            numberOfCards = 24;
             chooseRandom(frontFace, 12);  
-            gameArea.style.width = '700px';          
+            gameArea.style.width = '700px';              
             document.getElementById('game-level').innerHTML = level;                    
             break;
         case 'hard':
-            numberOfCards = 30;
-            chooseRandom(frontFace, 15);         
-            gameArea.style.width = '800px';    
+            numberOfCards = 36;
+            chooseRandom(frontFace, 18);         
+            gameArea.style.width = '800px';               
             document.getElementById('game-level').innerHTML = level;             
             break;
     } 
