@@ -30,23 +30,40 @@ main {
     background: var(--background-lightdark);
     border-radius: 20px;
     margin: 10px;
-    padding: 20px;
+    padding: 10px;
     
 }
 
 h1 {
     color: var(--main-highlight);
-    text-align: center;         
+    text-align: center;    
+    font-size: 3rem;     
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+#game-area-placeholder {
+    color: var(--background-dark);
+    font-size: 4rem;
 }
 
 .center {
     text-align: center;
 }
 
-hr {
-    width: 150px;
-    border: 1px solid rgb(138, 76, 76);
-}
+hr {  
+    width: 200px;
+    margin-left: 0px;
+    color: var(--main-highlight);       
+    height: 3px;
+    border: 0;
+    margin: auto;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--main-highlight), rgba(255, 255, 255, 0));    
+} 
+  
 
 #landing-page-main {
     max-width: 600px;
@@ -61,6 +78,7 @@ hr {
 
 #controls {
     text-align: center;
+    margin: 20px;
 }
 
 #new-game,
@@ -118,7 +136,7 @@ hr {
     color: var(--main-highlight);
     background-color: transparent;
     padding: 5px 10px;    
-    min-width: 100px;
+    min-width: 130px;
     width: calc(25% - 30px);
     border-radius: 5px;
 }
@@ -154,7 +172,8 @@ hr {
     width: 210px;
     height: 30px;
     position: relative;
-    background-color: salmon;
+    background-color: transparent;
+    border: 2px solid var(--main-highlight);
     border-radius: 5px;
     margin: 15px auto;    
     overflow: hidden;    
@@ -163,8 +182,8 @@ hr {
 .progress-fill {
     width: 0%;
     height: 100%;
-    background: rgb(6, 139, 61);    
-    transition: all 0.5s;
+    background: var(--main-complimentary-color);    
+    transition: all 0.8s;
     
 }
 
