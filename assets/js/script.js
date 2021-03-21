@@ -213,14 +213,15 @@ function updateProgressBar(pBar, value) {
 // ******* MODAL *******
  
 const victoryModal = document.getElementById('victory-modal-container');
-const close = document.getElementById('close');
+const close = document.getElementsByClassName('close');
 const viewLeaderBoard = document.getElementById('view-leaderboard');
 const leaderBoard = document.getElementById('leaderboard-modal-container');
 
-
+/*
 close.addEventListener('click', () => {
     victoryModal.classList.remove('show');    
 })
+*/
 
 function openLeaderBoard() {
     victoryModal.classList.remove('show');
@@ -231,6 +232,6 @@ function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
 }
 
-function fadeOut() {
-    document.getElementById('jani').style.opacity = '0' ;
+function closeVictoryModal() {
+    victoryModal.classList.remove('show');
 }
