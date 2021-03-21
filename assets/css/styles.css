@@ -45,6 +45,10 @@ h2 {
     font-weight: 400;
 }
 
+.highlight {
+    color: var(--main-highlight);
+}
+
 #game-area-placeholder {
     color: var(--background-dark);
     font-size: 4rem;
@@ -67,7 +71,21 @@ hr {
 
 #landing-page-main {
     max-width: 600px;
-    margin: auto;
+    margin: auto;    
+}
+
+#landing-page-bottom {
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    margin-bottom: 40px;
+}
+
+.game-info {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
 }
 
 #score-area {
@@ -256,6 +274,11 @@ hr {
         margin: 3px;
         width: 108px;    
         height: 135px;
+    }
+
+    .game-info {
+        padding-left: 20px;
+        padding-right: 20px;        
     }
 }
 

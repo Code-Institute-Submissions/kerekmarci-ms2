@@ -9,27 +9,31 @@
 <body>
     <main>
     <section id="landing-page-main">
-        <h1 class="center">Welcome to the Memory game!</h1>
+        <div class="welcome">
+            <h1 class="center">Welcome to the <br>Memory game!</h1>
+            <hr>
+            <h3 class="center">-- It's time to train that mind --</h3>
+        </div>
         <hr>
-        <h3 class="center">-- It's time to train that mind --</h3>
-        <hr>
-        <h2 class="center">About the game:</h2>
-        <p>
-            The object of the game is to find all pairs of matching cards as quickly as possible.
-            Two cards can be turned up at the same time, and if the face of the cards is identical, it's a match.
+        <div class="game-info">
+            <h2 class="center highlight">About the game:</h2>
+            <p>
+                The object of the game is to find all pairs of matching cards as quickly as possible.
+                Two cards can be turned up at the same time, and if the face of the cards is identical, it's a match.
 
-            There are 3 levels available:
-            <ul>
-                <li>Easy: 12 cards</li>
-                <li>Medium: 20 cards</li>
-                <li>Hard: 30 cards</li>
-            </ul>          
-
+                There are 3 levels available:
+                <ul>
+                    <li>Easy: 12 cards</li>
+                    <li>Medium: 24 cards</li>
+                    <li>Hard: 36 cards</li>
+                </ul>   
+            <br>    
             Enjoy!
         </p>
+        </div>
 
-        <div class="center">
-            <a href="game.html">Go to game</a>
+        <div id="landing-page-bottom" class="center">
+            <a href="game.html"><button class="level-button">Go to game</button></a>
         </div> 
     </section>
     </main>
