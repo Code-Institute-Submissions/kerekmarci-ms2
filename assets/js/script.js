@@ -95,10 +95,9 @@ function displayCards() {
                 <img src="assets/images/back.png" class="back-face" alt="Back of card">  
             </div> 
         `
-        card += text;                
+        card += text;                      
     }   
-
-    gameArea.innerHTML = card;     
+    gameArea.innerHTML = card;  
     cards = document.querySelectorAll('.card');   
     cards.forEach(card => card.addEventListener('click', flipCard)); 
     
@@ -230,4 +229,8 @@ function openLeaderBoard() {
 
 function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
+}
+
+function fadeOut() {
+    document.getElementById('jani').style.opacity = '0' ;
 }

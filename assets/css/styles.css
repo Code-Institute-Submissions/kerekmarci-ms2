@@ -99,11 +99,6 @@ hr {
     margin: 20px;
 }
 
-#new-game,
-#home {
-    display: inline-block;
-}
-
 #memory-game-area {   
      
     margin: auto;    
@@ -119,12 +114,12 @@ hr {
     height: 150px;
     transform: scale(1);
     transform-style: preserve-3d;  
-    transition: transform 0.5s;
+    transition: transform 0.5s;      
 }
 
 .card:active {
     transform: scale(0.97);
-    transition: transform 0.15s;    
+    transition: transform 0.15s; 
 }
 .card.flip {
     transform: rotateY(180deg);
@@ -154,7 +149,7 @@ hr {
     color: var(--main-highlight);
     background-color: transparent;
     padding: 5px 10px;    
-    min-width: 130px;
+    min-width: 100px;
     width: calc(25% - 30px);
     border-radius: 5px;
 }
@@ -175,6 +170,10 @@ hr {
 
 .level-button:focus {
     outline: 0;
+}
+
+.home-button {
+    width: 214px;
 }
 
 #timer {
@@ -270,6 +269,11 @@ hr {
     #memory-game-area {
         grid-template-columns: repeat(3, auto);
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
     .card {
         margin: 3px;
         width: 108px;    
@@ -286,6 +290,11 @@ hr {
     #memory-game-area {
         grid-template-columns: repeat(2, auto);
     }
+
+    h1 {
+      font-size: 2rem;
+    }
+
     .card {
         width: 96px;    
         height: 120px;        
@@ -296,6 +305,11 @@ hr {
   #memory-game-area {
     grid-template-columns: repeat(1, auto); 
   }
+
+  h1 {
+      font-size: 2rem;
+  }
+
   .card {
         width: 96px;    
         height: 120px;
