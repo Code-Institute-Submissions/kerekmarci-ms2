@@ -47,13 +47,29 @@
         </div>
     </section>
     
-    <div id="modal-container" class="modal-container">
+    <div id="victory-modal-container" class="modal-container">
         <div class="modal">
             <h1>Congratulations! You've won!</h1>
             <p>You've successfully completed this game.</p>
-            <button>View Leaderboard</button>
-            <button>New Game</button>
+            <form>
+                <label for="name">Enter your name for the leaderboard: (optional)</label><br>
+                <input type="text" id="name" name="name">
+            </form>
+            <button id="view-leaderboard" onclick="openLeaderBoard()">View Leaderboard</button>            
             <button id="close">Close</button>
+        </div>
+    </div>
+
+    <div id="leaderboard-modal-container" class="modal-container">
+        <div class="modal">
+            <h1>Leaderbord</h1>
+            <h3>See our best players here:</h3>
+            
+            <p>Player 1</p>
+            <p>Player 2</p>
+            <p>Your name</p>
+                       
+            <button id="close" onclick="closeLeaderBoard()">Close</button>
         </div>
     </div>
 

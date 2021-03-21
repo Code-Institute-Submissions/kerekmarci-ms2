@@ -125,8 +125,9 @@ function checkForMatch() {
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);       
         if (matchCounter === numberOfCards / 2 ) {
+            // Game won
             setTimeout( () => {
-                modal_container.classList.add('show');
+                victoryModal.classList.add('show'); // showing victory modal
             }, 500);
             stopTimer();
         }        
@@ -202,10 +203,22 @@ function updateProgressBar(pBar, value) {
 }
 
 // ******* MODAL *******
-
-const modal_container = document.getElementById('modal-container');
+ 
+const victoryModal = document.getElementById('victory-modal-container');
 const close = document.getElementById('close');
+const viewLeaderBoard = document.getElementById('view-leaderboard');
+const leaderBoard = document.getElementById('leaderboard-modal-container');
+
 
 close.addEventListener('click', () => {
-    modal_container.classList.remove('show');
+    victoryModal.classList.remove('show');    
 })
+
+function openLeaderBoard() {
+    victoryModal.classList.remove('show');
+    leaderBoard.classList.add('show');
+}
+
+function closeLeaderBoard() {
+    leaderBoard.classList.remove('show');
+}
