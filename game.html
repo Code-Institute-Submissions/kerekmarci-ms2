@@ -7,15 +7,20 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <main>
     <h1>Memory game</h1>
 
-    <h2 class="center">Select your level</h2>
+    <section id="level-select">
 
-    <div class="center">
-        <button id="easy" class="level-button">Easy</button>
-        <button id="medium" class="level-button">Medium</button>
-        <button id="hard" class="level-button">Hard</button>
-    </div>  
+        <h2 class="center">Select your level</h2>
+    
+        <div class="center">
+            <button id="easy" class="level-button">Easy</button>
+            <button id="medium" class="level-button">Medium</button>
+            <button id="hard" class="level-button">Hard</button>
+        </div>  
+
+    </section>
 
     <section id="score-area">      
         Game level: <span id="game-level"></span>
@@ -72,7 +77,7 @@
             <button id="close" onclick="closeLeaderBoard()">Close</button>
         </div>
     </div>
-
+    </main>
     <script src="assets/js/script.js"></script>
 </body>
 </html>

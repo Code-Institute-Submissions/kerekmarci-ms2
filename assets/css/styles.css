@@ -1,12 +1,45 @@
-body {
-    background: #aec5e0; 
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+@font-face {
+  font-family: 'Digital';
+  src: url('../fonts/digital.ttf'); 
+  
+}
+  
+:root {
+    --main-font: 'DM Sans', sans-serif;
+    --timer--font: 'Digital', monospace;
+    --main-highlight: rgb(247, 82, 57);
+    --background-dark: #12141D;
+    --background-lightdark: #20222E;
 }
 
+body {    
+    background: var(--background-dark);   
+    color: #fff;    
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    width: 45vw;
+    margin: auto;    
+}
+
+main {
+    background: var(--background-lightdark);
+    border-radius: 20px;
+    margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#level-select {
+    
+}
+
+
 h1 {
-    color: red;
-    text-align: center;  
+    color: var(--main-highlight);
+    text-align: center;         
 }
 
 .center {
@@ -25,6 +58,8 @@ hr {
 
 #score-area {
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 #controls {
@@ -37,29 +72,37 @@ hr {
 }
 
 #memory-game-area {   
+     
     margin: auto;    
     display: grid;        
     grid-Template-Columns: repeat(4, auto); 
     justify-content: center;          
 }
 
-.card {       
+.card {      
     position: relative;    
     margin: 5px;    
-    transform-style: preserve-3d;  
     width: 120px;    
     height: 150px;
+    transform: scale(1);
+    transform-style: preserve-3d;  
+    transition: transform 0.5s;
 }
 
+.card:active {
+    transform: scale(0.97);
+    transition: transform 0.15s;    
+}
 .card.flip {
     transform: rotateY(180deg);
 }
 
 .front-face,
 .back-face {
-    position: absolute;
+    position: absolute;    
     width: 100%;
     height: 100%;
+    opacity: 0.9;
     border-radius: 5px;
     backface-visibility: hidden;
 }
@@ -67,6 +110,39 @@ hr {
 .front-face {
     transform: rotateY(180deg);
 }
+.front-face,
+.back-face:hover {
+    opacity: 1;
+}
+
+.level-button {
+    border: 3px solid var(--main-highlight);
+    font: var(--main-font);
+    color: var(--main-highlight);
+    background-color: transparent;
+    padding: 5px 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    min-width: 100px;
+    width: calc(25% - 30px);
+    border-radius: 5px;
+}
+
+.level-button:hover {
+    background-color: var(--main-highlight);
+    color: var(--background-lightdark);    
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.level-button:focus {
+    outline: 0;
+}
+
+#timer {
+    font-family: var(--timer--font);
+}
+
 
 /* ----- PROGRESS BAR ------ */
 
@@ -130,6 +206,24 @@ hr {
 
 
 /* ---------- MEDIA QUEIRY ---------- */
+
+@media (max-width: 1300px) {
+    body {
+        width: 60vw;
+    }
+}
+
+@media (max-width: 980px) {
+    body {
+        width: 80vw;
+    }
+}
+
+@media (max-width: 730px) {
+    body {
+        width: 100vw;
+    }
+}
 
 @media (max-width: 576px) {
     #memory-game-area {

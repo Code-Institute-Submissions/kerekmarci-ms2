@@ -121,9 +121,9 @@ function flipCard() {
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
         // it's a match
-        matchCounter++;
+        matchCounter++;      
         document.getElementById('match-counter').innerHTML = matchCounter; 
-        updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);       
+        updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);             
         if (matchCounter === numberOfCards / 2 ) {
             // Game won
             setTimeout( () => {
@@ -140,8 +140,8 @@ function checkForMatch() {
 
 function disableCards() {
     firstCard.removeEventListener('click', flipCard);
-    secondCard.removeEventListener('click', flipCard);    
-    resetBoard();
+    secondCard.removeEventListener('click', flipCard);
+    resetBoard();      
 }
 
 function unFlipCards() {
