@@ -13,20 +13,32 @@ let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
 
-document.getElementById("easy").addEventListener("click", function() {
-    sessionStorage.setItem("gameLevel", "easy");  
+const easyButton = document.getElementById("easy");
+easyButton.addEventListener("click", function() {
+    sessionStorage.setItem("gameLevel", "easy");
+    this.classList.add('btn-highlight'); 
+    mediumButton.classList.remove('btn-highlight'); 
+    hardButton.classList.remove('btn-highlight');
     createLevel();
     displayCards();
 });
 
-document.getElementById("medium").addEventListener("click", function() {
-    sessionStorage.setItem("gameLevel", "medium");  
+const mediumButton = document.getElementById("medium");
+mediumButton.addEventListener("click", function() {
+    sessionStorage.setItem("gameLevel", "medium"); 
+    this.classList.add('btn-highlight'); 
+    easyButton.classList.remove('btn-highlight'); 
+    hardButton.classList.remove('btn-highlight');
     createLevel(); 
     displayCards(); 
 });
 
-document.getElementById("hard").addEventListener("click", function() {
+const hardButton = document.getElementById("hard");
+hardButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "hard"); 
+    this.classList.add('btn-highlight');
+    easyButton.classList.remove('btn-highlight');
+    mediumButton.classList.remove('btn-highlight'); 
     createLevel();
     displayCards();   
 });
@@ -37,18 +49,15 @@ function createLevel() {
     switch (level) {
         case 'easy':
             numberOfCards = 12;
-            chooseRandom(frontFace, 6);                   
-            document.getElementById('game-level').innerHTML = level;
+            chooseRandom(frontFace, 6);                 
             break;
         case 'medium': 
             numberOfCards = 24;
-            chooseRandom(frontFace, 12);                          
-            document.getElementById('game-level').innerHTML = level;                    
+            chooseRandom(frontFace, 12);                                             
             break;
         case 'hard':
             numberOfCards = 36;
-            chooseRandom(frontFace, 18);       
-            document.getElementById('game-level').innerHTML = level;             
+            chooseRandom(frontFace, 18);                    
             break;
     } 
 }

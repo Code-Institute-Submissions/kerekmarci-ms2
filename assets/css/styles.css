@@ -10,6 +10,7 @@
     --main-font: 'DM Sans', sans-serif;
     --timer--font: 'Digital', monospace;
     --main-highlight: rgb(247, 82, 57);
+    --main-complimentary-color: #3CCF91;
     --background-dark: #12141D;
     --background-lightdark: #20222E;
 }
@@ -21,21 +22,17 @@ body {
     margin: 0;
     padding: 0;
     width: 45vw;
-    margin: auto;    
+    margin: auto;  
+      
 }
 
 main {
     background: var(--background-lightdark);
     border-radius: 20px;
     margin: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-#level-select {
+    padding: 20px;
     
 }
-
 
 h1 {
     color: var(--main-highlight);
@@ -120,9 +117,7 @@ hr {
     font: var(--main-font);
     color: var(--main-highlight);
     background-color: transparent;
-    padding: 5px 10px;
-    margin-left: 5px;
-    margin-right: 5px;
+    padding: 5px 10px;    
     min-width: 100px;
     width: calc(25% - 30px);
     border-radius: 5px;
@@ -135,12 +130,21 @@ hr {
     transition: all 0.5s;
 }
 
+.level-button.btn-highlight {
+    background-color: var(--main-highlight);
+    color: var(--background-lightdark);    
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
 .level-button:focus {
     outline: 0;
 }
 
 #timer {
     font-family: var(--timer--font);
+    color: var(--main-complimentary-color);
+    font-size: 1.5rem;
 }
 
 
