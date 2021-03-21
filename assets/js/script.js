@@ -125,9 +125,9 @@ function checkForMatch() {
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);       
         if (matchCounter === numberOfCards / 2 ) {
-            setTimeout(function() {
-                alert('WIN!');
-            }, 1500);
+            setTimeout( () => {
+                modal_container.classList.add('show');
+            }, 500);
             stopTimer();
         }        
         disableCards();    
@@ -200,3 +200,12 @@ function updateProgressBar(pBar, value) {
     pBar.querySelector('.progress-fill').style.width = `${value}%`;
     pBar.querySelector('.progress-text').textContent = `${value}%`;
 }
+
+// ******* MODAL *******
+
+const modal_container = document.getElementById('modal-container');
+const close = document.getElementById('close');
+
+close.addEventListener('click', () => {
+    modal_container.classList.remove('show');
+})
