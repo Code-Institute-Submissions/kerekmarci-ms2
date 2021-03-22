@@ -2,8 +2,11 @@
 
 @font-face {
   font-family: 'Digital';
-  src: url('../fonts/digital.ttf'); 
-  
+  src: url('../fonts/digital.ttf');  
+}
+
+* {
+    box-sizing: border-box;
 }
   
 :root {
@@ -13,6 +16,7 @@
     --main-complimentary-color: #3CCF91;
     --background-dark: #12141D;
     --background-lightdark: #20222E;
+    --background-lighter-dark: #454753;
 }
 
 body {    
@@ -22,8 +26,11 @@ body {
     margin: 0;
     padding: 0;
     width: 45vw;
-    margin: auto;  
-      
+    margin: auto;        
+}
+
+body.light {
+    background-color: #fff;
 }
 
 main {
@@ -207,6 +214,51 @@ small {
     
 }
 
+/* ----- THEME TOGGLE ------ */
+
+.ThemeLabel {
+    height: 26px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--background-dark);
+    border-radius: 50px;
+    padding: 5px;
+    position: relative;
+}
+
+.ThemeCheckbox {
+    position: absolute;
+    opacity: 0;
+}
+
+.fa-moon {
+    color: #F1C40F;    
+}
+
+.fa-sun {
+    color: #F39C12;
+}
+
+.ball {
+    background-color: #fff;
+    height: 22px;
+    width: 22px;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    position: absolute;
+    transition: transform 0.2s linear;
+}
+
+.ThemeCheckbox:checked + .ThemeLabel {
+    background-color: var(--background-lighter-dark);
+}
+
+.ThemeCheckbox:checked + .ThemeLabel .ball {
+    transform: translateX(24px);
+}
 
 /* ----- PROGRESS BAR ------ */
 
@@ -305,7 +357,7 @@ form h2 {
 }
 
 #form-questions {
-    background-color: #454753;
+    background-color: var(--background-lighter-dark);
     width: 450px;
     margin: auto;
     border-radius: 10px;

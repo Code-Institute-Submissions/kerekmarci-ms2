@@ -235,3 +235,10 @@ function closeLeaderBoard() {
 function closeVictoryModal() {
     victoryModal.classList.remove('show');
 }
+
+// ******* DARK/LIGHT THEME TOGGLE  *******
+
+const themeToggle = document.getElementById('ThemeCheckbox');
+themeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('light');
+});
