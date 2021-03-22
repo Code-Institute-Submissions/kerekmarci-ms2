@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <main>    
+        <div class="welcome">
+            <h1 class="center">Feedback</h1>
+            <hr>
+            <h3 class="center">-- Please share your thoughts on this game! --</h3>
+            <hr>
+        </div>
+
+        <h2>First a little bit about you:</h2>
+
+        <form>
+            <h3>Gender:</h3>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female">
+
+            <br>
+            <label for="age">Your age</label>
+            <input type="text" id="age" name="age">
+            <p>This feedback form is anonym. This information will help me analyse your feedback based on audience.</p>
+            <br>
+
+            <h2>How would you rate?</h2>
+            <label for="easeOfUse">Ease of Use</label>
+            <input type="range" min="1" max="10" value="8" class="slider" id="easeOfUse">
+            <br>
+            <label for="gameExperience">Game Experience</label>
+            <input type="range" min="1" max="10" value="8" class="slider" id="gameExperience">
+            <br>
+            <label for="siteLayout">Site layout</label>
+            <input type="range" min="1" max="10" value="8" class="slider" id="siteLayout">
+
+            <br>
+            <input type="submit" value="Submit">
+        
+        </form>
+    </main>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
