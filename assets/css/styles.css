@@ -17,6 +17,7 @@
     --background-dark: #12141D;
     --background-lightdark: #20222E;
     --background-lighter-dark: #454753;
+    --modal-background-dark: #
 }
 
 body {    
@@ -160,6 +161,10 @@ hr {
 
 .front-face {
     transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 .front-face,
 .back-face:hover {
