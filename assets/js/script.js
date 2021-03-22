@@ -21,7 +21,7 @@ easyButton.addEventListener("click", function() {
     hardButton.classList.remove('btn-highlight');
     createLevel();
     displayCards();
-});
+}); 
 
 const mediumButton = document.getElementById("medium");
 mediumButton.addEventListener("click", function() {
