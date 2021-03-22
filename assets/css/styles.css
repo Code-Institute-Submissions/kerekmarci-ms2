@@ -12,12 +12,22 @@
 :root {
     --main-font: 'DM Sans', sans-serif;
     --timer--font: 'Digital', monospace;
-    --main-highlight: rgb(247, 82, 57);
-    --main-complimentary-color: #3CCF91;
+
+    /* --------- DARK THEME --------- */
     --background-dark: #12141D;
     --background-lightdark: #20222E;
     --background-lighter-dark: #454753;
-    --modal-background-dark: #
+    --main-highlight: #F75239;
+    --main-complimentary-color: #3CCF91;
+    --modal-background-dark: #434652;
+
+    /* --------- LIGHT THEME --------- */
+    --background-light: #A9A9A9;
+    --background-light-neutral: #bababa;
+    --background-light-lightest: #FFFFFF;
+    --main-highlight-light: #FF3B3F;
+    --main-complimentary-color-light: #CAEBF2;
+
 }
 
 body {    
@@ -27,11 +37,16 @@ body {
     margin: 0;
     padding: 0;
     width: 45vw;
-    margin: auto;        
+    margin: auto;   
+    transition: backround 1s linear;     
 }
 
 body.light {
-    background-color: #fff;
+    background-color: var(--background-light);
+}
+
+body p.light {
+    color: #000000;
 }
 
 main {
@@ -40,6 +55,10 @@ main {
     margin: 10px;
     padding: 10px;
     padding-bottom: 30px;
+}
+
+main.light {
+    background: var(--background-light-neutral);
 }
 
 .margin-top {
@@ -56,6 +75,8 @@ h1 {
 h2 {
     font-weight: 400;
 }
+
+
 
 .highlight {
     color: var(--main-highlight);
@@ -314,7 +335,7 @@ small {
 }
 
 .modal {
-    background-color: rgb(67, 70, 82);
+    background-color: var(--modal-background-dark);
     border-radius: 5px;
     padding: 30px 50px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
