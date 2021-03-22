@@ -15,35 +15,45 @@
             <hr>
         </div>
 
-        <h2>First a little bit about you:</h2>
+        <h2 class="center">First a little bit about you:</h2>
 
         <form>
-            <h3>Gender:</h3>
-            <label for="male">Male</label>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="female">Female</label>
-            <input type="radio" id="female" name="gender" value="female">
+            <div id="form-questions">
+                <h3>Gender:</h3>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female">
 
-            <br>
-            <label for="age">Your age</label>
-            <input type="text" id="age" name="age">
-            <p>This feedback form is anonym. This information will help me analyse your feedback based on audience.</p>
-            <br>
+                <br>
+                <label for="age">Your age</label>
+                <input type="number" id="age" name="age" min="8" max="100">
+                <p><small>This feedback form is anonym. <br>This information will help me analyse your feedback based on audience.</small></p>
+                <br>
 
-            <h2>How would you rate?</h2>
-            <label for="easeOfUse">Ease of Use</label>
-            <input type="range" min="1" max="10" value="8" class="slider" id="easeOfUse">
-            <br>
-            <label for="gameExperience">Game Experience</label>
-            <input type="range" min="1" max="10" value="8" class="slider" id="gameExperience">
-            <br>
-            <label for="siteLayout">Site layout</label>
-            <input type="range" min="1" max="10" value="8" class="slider" id="siteLayout">
+                <h2>How would you rate?</h2>
+                
+                <label for="easeOfUse">Ease of Use</label><br>
+                <input type="range" min="1" max="10" value="8" class="slider" id="easeOfUse" oninput="this.nextElementSibling.value = this.value">                  
+                <output>8</output>
+                
+                <br>
+                <label for="gameExperience">Game Experience</label><br>
+                <input type="range" min="1" max="10" value="8" class="slider" id="gameExperience">
+                <output>8</output>
+                <br>
+                <label for="siteLayout">Site layout</label><br>
+                <input type="range" min="1" max="10" value="8" class="slider" id="siteLayout">
+                <output>8</output>
 
-            <br>
-            <input type="submit" value="Submit">
+                <br>
+            </div>
+            <button type="submit" value="Submit" class="level-button home-button">SUBMIT</button>
         
         </form>
+        <div class="center">
+            <a href="game.html"><button class="level-button home-button">BACK GO GAME</button></a>
+        </div>
     </main>
 
 

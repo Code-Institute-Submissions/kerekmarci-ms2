@@ -186,12 +186,20 @@ hr {
 
 .home-button {
     width: 214px;
+    margin-top: 5px;
+    
 }
 
 #timer {
     font-family: var(--timer--font);
     color: var(--main-complimentary-color);
     font-size: 1.5rem;
+}
+
+
+
+small {
+    font-style: italic;
 }
 
 
@@ -280,6 +288,26 @@ input[type=text] {
     height: 26px;
 }
 
+/* ----- FEEDBACK FORM ------ */
+
+form {
+    text-align: center; 
+}
+
+#form-questions {
+    background-color: #454753;
+    width: 450px;
+    margin: auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.slider {    
+    width: 60%;    
+    margin-bottom: 15px;    
+}
+
+
 
 /* ---------- MEDIA QUEIRY ---------- */
 
@@ -319,6 +347,10 @@ input[type=text] {
     .game-info {
         padding-left: 20px;
         padding-right: 20px;        
+    }
+
+    #form-questions {
+        width: 100%;
     }
 }
 
