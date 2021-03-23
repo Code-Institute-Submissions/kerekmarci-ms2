@@ -12,6 +12,11 @@ const disableLightMode = () => {
     localStorage.setItem('lightMode', 'disabled');
 }
 
+// To load preference from last visit
+if (lightMode === 'enabled') {
+    enableLightMode();
+}
+
 themeToggle.addEventListener('change', () => {
     lightMode = localStorage.getItem('lightMode');  
     if (lightMode !== 'enabled') {
