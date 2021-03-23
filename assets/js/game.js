@@ -13,6 +13,13 @@ let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
 
+// ******* SOUND EFFECTS *******
+const errorSound = document.getElementById('ErrorSound');
+const matchSound = document.getElementById('MatchSound');
+const victorySound = document.getElementById('VictorySound');
+const flipSound = document.getElementById('FlipSound');
+// ******* SOUND EFFECTS *******
+
 const easyButton = document.getElementById("easy");
 easyButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");
@@ -109,6 +116,7 @@ function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return; // to avoid a match if user clicks on the same card twice
     this.classList.add('flip');
+    flipSound.play();
 
     if (!isFlippedCard) {
         // first click
@@ -129,12 +137,17 @@ function flipCard() {
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
         // it's a match
-        matchCounter++;      
+        matchCounter++;
+        setTimeout( () => {
+            matchSound.play();  
+        }, 300);
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);             
         if (matchCounter === numberOfCards / 2 ) {
-            // Game won
+            // Game won           
+             
             setTimeout( () => {
+                victorySound.play();
                 victoryModal.classList.add('show'); // showing victory modal
             }, 500);
             stopTimer();
@@ -143,6 +156,9 @@ function checkForMatch() {
     } else {
         // it's not a match  
         unFlipCards();
+        setTimeout( () => {
+            errorSound.play();
+        }, 300);
     }   
 }
 
