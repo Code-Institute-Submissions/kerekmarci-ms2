@@ -30,6 +30,7 @@
     --main-highlight-light: #FF3B3F;
     --main-complimentary-color-light: #CAEBF2;
     --text-color-light-theme: #20222E;
+    --main-complimentary-color-light: #177400;
 
 }
 
@@ -48,7 +49,8 @@ body.light {
     --background-dark: var(--background-light); 
     --background-lightdark: var(--background-light-neutral);
     --main-highlight: var(--main-highlight-light);
-    --text-color-dark-theme: var(--text-color-light-theme);      
+    --text-color-dark-theme: var(--text-color-light-theme);  
+    --main-complimentary-color: var(--main-complimentary-color-light);
 }
 
 main {
@@ -73,6 +75,7 @@ h1 {
 
 h2 {
     font-weight: 400;
+    color: var(--text-color-dark-theme);
 }
 
 h3 {
