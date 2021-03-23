@@ -78,7 +78,8 @@ main {
     border-radius: 20px;
     margin: 10px;
     padding: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 30px;  
+    position: relative;  
 }
 
 .margin-top {
@@ -318,6 +319,36 @@ small {
 .ThemeCheckbox:checked + .ThemeLabel .ball {
     transform: translateX(24px);
 }
+
+/* ----- AUDIO BUTTONS ------ */
+
+#audio-container  {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+    transform: scale(1.4);
+    color: #F39C12;
+}
+
+.fa-volume-up {
+    
+    opacity: 1;
+    
+}
+
+.fa-volume-up.show {
+    opacity: 1;
+}
+
+.fa-volume-mute {
+    opacity: 0;
+}
+
+.fa-volume-mute.show {
+    opacity: 1;
+}
+
+
 
 /* ----- PROGRESS BAR ------ */
 

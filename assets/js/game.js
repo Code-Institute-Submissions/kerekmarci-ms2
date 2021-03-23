@@ -13,13 +13,6 @@ let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
 
-// ******* SOUND EFFECTS *******
-const errorSound = document.getElementById('ErrorSound');
-const matchSound = document.getElementById('MatchSound');
-const victorySound = document.getElementById('VictorySound');
-const flipSound = document.getElementById('FlipSound');
-// ******* SOUND EFFECTS *******
-
 const easyButton = document.getElementById("easy");
 easyButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");
@@ -250,4 +243,26 @@ function closeLeaderBoard() {
 
 function closeVictoryModal() {
     victoryModal.classList.remove('show');
+}
+
+// ******* SOUND EFFECTS *******
+const errorSound = document.getElementById('ErrorSound');
+const matchSound = document.getElementById('MatchSound');
+const victorySound = document.getElementById('VictorySound');
+const flipSound = document.getElementById('FlipSound');
+
+const sounds = document.getElementsByTagName('audio');
+const muteBtn = document.getElementById('MuteSound');
+
+muteBtn.addEventListener( () => {
+    for (let i = 0; i < sounds.length; i++) {
+        sounds[i].muted = true;
+    }    
+    
+})
+
+function muteSound() {
+    for (let i = 0; i < sounds.length; i++) {        
+        sounds[i].muted = true;
+    }
 }
