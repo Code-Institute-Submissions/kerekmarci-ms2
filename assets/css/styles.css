@@ -12,7 +12,7 @@
 :root {
     --main-font: 'DM Sans', sans-serif;
     --timer--font: 'Digital', monospace;
-    --transition-time: 0.8s;
+
     --background-dark: #12141D;
     --background-lightdark: #20222E;
     --background-lighter-dark: #454753;
