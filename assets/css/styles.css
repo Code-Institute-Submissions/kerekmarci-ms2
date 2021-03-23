@@ -12,6 +12,7 @@
 :root {
     --main-font: 'DM Sans', sans-serif;
     --timer--font: 'Digital', monospace;
+    --transition-time: 0.8s;
 
     /* --------- DARK THEME --------- */
     --background-dark: #12141D;
@@ -20,6 +21,7 @@
     --main-highlight: #F75239;
     --main-complimentary-color: #3CCF91;
     --modal-background-dark: #434652;
+    --text-color-dark-theme: #FFF;
 
     /* --------- LIGHT THEME --------- */
     --background-light: #A9A9A9;
@@ -27,6 +29,7 @@
     --background-light-lightest: #FFFFFF;
     --main-highlight-light: #FF3B3F;
     --main-complimentary-color-light: #CAEBF2;
+    --text-color-light-theme: #20222E;
 
 }
 
@@ -38,15 +41,14 @@ body {
     padding: 0;
     width: 45vw;
     margin: auto;   
-    transition: backround 1s linear;     
+    transition: background-color var(--transition-time) ease;  
 }
 
 body.light {
-    background-color: var(--background-light);
-}
-
-body p.light {
-    color: #000000;
+    --background-dark: var(--background-light); 
+    --background-lightdark: var(--background-light-neutral);
+    --main-highlight: var(--main-highlight-light);
+    --text-color-dark-theme: var(--text-color-light-theme);      
 }
 
 main {
@@ -55,10 +57,7 @@ main {
     margin: 10px;
     padding: 10px;
     padding-bottom: 30px;
-}
-
-main.light {
-    background: var(--background-light-neutral);
+    transition: background-color var(--transition-time) ease;  
 }
 
 .margin-top {
@@ -76,7 +75,19 @@ h2 {
     font-weight: 400;
 }
 
+h3 {
+    color: var(--text-color-dark-theme);
+    transition: color var(--transition-time) ease;
+}
 
+p, li {
+    color: var(--text-color-dark-theme);
+    transition: color var(--transition-time) ease;  
+}
+
+ul {
+    margin-bottom: 20px;
+}
 
 .highlight {
     color: var(--main-highlight);
