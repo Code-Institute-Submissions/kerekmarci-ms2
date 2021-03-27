@@ -325,15 +325,14 @@ small {
 #audio-container  {
     position: absolute;
     top: 15px;
-    right: 0px;
+    right: 40px;
     transform: scale(1.4);
     color: #F39C12;
 }
 
 .fa-volume-up {
-    
-    opacity: 1;
-    
+    position: absolute;
+    opacity: 0;    
 }
 
 .fa-volume-up.show {
@@ -341,6 +340,7 @@ small {
 }
 
 .fa-volume-mute {
+    position: absolute;
     opacity: 0;
 }
 
