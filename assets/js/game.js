@@ -250,6 +250,7 @@ const errorSound = document.getElementById('ErrorSound');
 const matchSound = document.getElementById('MatchSound');
 const victorySound = document.getElementById('VictorySound');
 const flipSound = document.getElementById('FlipSound');
+const cardSounds = [errorSound, matchSound, victorySound, flipSound];
 
 
 /* ----- AUDIO BUTTONS ------ */
@@ -257,24 +258,20 @@ const flipSound = document.getElementById('FlipSound');
 const soundButton = document.getElementById('volume-up');
 const muteButton = document.getElementById('volume-mute');
 const audio = document.getElementById('audio-container');
+let soundOn = true;
 
 audio.addEventListener('click', () => {    
     soundButton.classList.toggle('show');
     muteButton.classList.toggle('show');
-}) 
-
-
-/*
-muteBtn.addEventListener( () => {
-    for (let i = 0; i < sounds.length; i++) {
-        sounds[i].muted = true;
-    }    
-    
+    if (soundOn) {
+        for (let i = 0; i < cardSounds.length; i++) {
+            cardSounds[i].muted = true;            
+        }; 
+        soundOn = false; 
+    } else {
+        for (let i = 0; i < cardSounds.length; i++) {
+            cardSounds[i].muted = false;            
+        }; 
+        soundOn = true;
+    }     
 })
-
-function muteSound() {
-    for (let i = 0; i < sounds.length; i++) {        
-        sounds[i].muted = true;
-    }
-}
-*/
