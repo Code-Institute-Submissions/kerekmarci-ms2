@@ -328,6 +328,7 @@ small {
     right: 40px;
     transform: scale(1.4);
     color: #F39C12;
+    cursor: pointer;
 }
 
 .fa-volume-up {

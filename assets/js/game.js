@@ -251,9 +251,20 @@ const matchSound = document.getElementById('MatchSound');
 const victorySound = document.getElementById('VictorySound');
 const flipSound = document.getElementById('FlipSound');
 
-const sounds = document.getElementsByTagName('audio');
-const muteBtn = document.getElementById('MuteSound');
 
+/* ----- AUDIO BUTTONS ------ */
+
+const soundButton = document.getElementById('volume-up');
+const muteButton = document.getElementById('volume-mute');
+const audio = document.getElementById('audio-container');
+
+audio.addEventListener('click', () => {    
+    soundButton.classList.toggle('show');
+    muteButton.classList.toggle('show');
+}) 
+
+
+/*
 muteBtn.addEventListener( () => {
     for (let i = 0; i < sounds.length; i++) {
         sounds[i].muted = true;
@@ -266,3 +277,4 @@ function muteSound() {
         sounds[i].muted = true;
     }
 }
+*/
