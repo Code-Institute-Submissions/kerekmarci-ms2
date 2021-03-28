@@ -12,6 +12,34 @@ let gameArea = document.getElementById('memory-game-area');
 let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
+let username = document.getElementById('username');         // Username entered for high scores leaderboard
+let highScores = [                                          // Leaderboard default values
+    {
+        name: "Johnny Cash",
+        gameLevel: "easy",
+        moves: 13
+    },
+    {
+        name: "Elvis Presley",
+        gameLevel: "medium",
+        moves: 22
+    },
+    {
+        name: "Bill Gates",
+        gameLevel: "hard",
+        moves: 23
+    },
+    {
+        name: "Lionel Messi",
+        gameLevel: "medium",
+        moves: 26
+    },
+    {
+        name: "George Clooney",
+        gameLevel: "medium",
+        moves: 32
+    },
+];        
 
 const easyButton = document.getElementById("easy");
 easyButton.addEventListener("click", function() {
@@ -227,15 +255,32 @@ const close = document.getElementsByClassName('close');
 const viewLeaderBoard = document.getElementById('view-leaderboard');
 const leaderBoard = document.getElementById('leaderboard-modal-container');
 
-/*
-close.addEventListener('click', () => {
-    victoryModal.classList.remove('show');    
-})
-*/
+
+// ******* LEADERBOARD *******
+
+let table = document.getElementById('leaderboard-table');
 
 function openLeaderBoard() {
     victoryModal.classList.remove('show');
     leaderBoard.classList.add('show');
+    table.innerHTML = `
+        <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Moves</th>                    
+        </tr>   
+    `;
+    for (let i = 0; i < 5; i++) {
+        table.innerHTML += `
+            <tr>
+                <td>${i + 1}.</td>
+                <td>${highScores[i].name}</td> 
+                <td>${highScores[i].gameLevel}</td>               
+                <td>${highScores[i].moves}</td>
+            </tr>
+        `        
+    }
 }
 
 function closeLeaderBoard() {
@@ -279,14 +324,11 @@ audio.addEventListener('click', () => {
 
 /* ----- HIGH SCORES ------ */
 
-let username = document.getElementById('username');
-/* const mostRecentScore = localStorage.getItem("mostRecentScore"); */
-let highScores = JSON.parse(sessionStorage.getItem("highScores")) || []; 
-
 function saveHighScore() {
     let score = {
-        moves: moveCounter,
-        name: username.value
+        name: username.value,
+        gameLevel: level,
+        moves: moveCounter
     };
     highScores.push(score);
     highScores.sort((a, b) => {
