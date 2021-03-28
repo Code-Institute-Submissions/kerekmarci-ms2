@@ -275,3 +275,7 @@ audio.addEventListener('click', () => {
         soundOn = true;
     }     
 })
+
+/* ----- HIGH SCORES ------ */
+
+let savedHighScores = sessionStorage.getItem('highScoreList') || '[]'; 
