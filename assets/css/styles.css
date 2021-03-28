@@ -444,13 +444,11 @@ table {
 
 input[type=text] {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 26px;
 }
 
-#view-leaderboard {
-    display: block;
-}
+
 
 /* ----- FEEDBACK FORM ------ */
 
@@ -578,18 +576,11 @@ button[type=submit] {
     }
 
     .modal h1 {
-        font-size: 26px;        
+        font-size: 26px;   
+        margin-top: 10px;     
     }
 
     .modal h3 {
         font-size: 18px;
-    }
-
-    .modal h1 {
-        margin-top: 10px;
-    }
-
-    .modal button {
-        padding: 0;
-    }
+    }    
 }

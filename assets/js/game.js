@@ -160,7 +160,9 @@ function checkForMatch() {
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);             
         if (matchCounter === numberOfCards / 2 ) {
-            // Game won                
+            // Game won
+            username.value = "";            //to empty content of input filed if user played a previous game   
+            username.focus();                        
             setTimeout( () => {
                 victorySound.play();
                 victoryModal.classList.add('show'); // showing victory modal
@@ -278,6 +280,22 @@ function openLeaderBoard(event) {
     }
 }
 
+function saveHighScore() {
+    let score = {
+        name: username.value,
+        gameLevel: level,
+        moves: moveCounter
+    };
+    highScores.push(score);
+    highScores.sort((a, b) => {
+        return a.moves - b.moves;
+    });
+    /* highScores.splice(5); // only show the top 5 */
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    console.log(highScores);
+}
+
+
 function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
 }
@@ -316,21 +334,4 @@ audio.addEventListener('click', () => {
         soundOn = true;
     }     
 })
-
-/* ----- HIGH SCORES ------ */
-
-function saveHighScore() {
-    let score = {
-        name: username.value,
-        gameLevel: level,
-        moves: moveCounter
-    };
-    highScores.push(score);
-    highScores.sort((a, b) => {
-        return a.moves - b.moves;
-    });
-    /* highScores.splice(5); // only show the top 5 */
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-    console.log(highScores);
-}
 
