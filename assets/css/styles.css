@@ -448,6 +448,10 @@ input[type=text] {
     height: 26px;
 }
 
+#view-leaderboard {
+    display: block;
+}
+
 /* ----- FEEDBACK FORM ------ */
 
 form {

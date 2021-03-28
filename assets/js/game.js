@@ -12,7 +12,7 @@ let gameArea = document.getElementById('memory-game-area');
 let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
-let username = document.getElementById('username');         // Username entered for high scores leaderboard
+const username = document.getElementById('username');         // Username entered for high scores leaderboard
 let highScores = [                                          // Leaderboard default values
     {
         name: "Johnny Cash",
@@ -28,14 +28,9 @@ let highScores = [                                          // Leaderboard defau
         name: "Bill Gates",
         gameLevel: "hard",
         moves: 23
-    },
+    },   
     {
         name: "Lionel Messi",
-        gameLevel: "medium",
-        moves: 26
-    },
-    {
-        name: "George Clooney",
         gameLevel: "medium",
         moves: 32
     },
@@ -165,9 +160,7 @@ function checkForMatch() {
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);             
         if (matchCounter === numberOfCards / 2 ) {
-            // Game won    
-              
-            saveHighScore(); 
+            // Game won                
             setTimeout( () => {
                 victorySound.play();
                 victoryModal.classList.add('show'); // showing victory modal
@@ -260,7 +253,9 @@ const leaderBoard = document.getElementById('leaderboard-modal-container');
 
 let table = document.getElementById('leaderboard-table');
 
-function openLeaderBoard() {
+function openLeaderBoard(event) {
+    event.preventDefault();
+    saveHighScore();
     victoryModal.classList.remove('show');
     leaderBoard.classList.add('show');
     table.innerHTML = `

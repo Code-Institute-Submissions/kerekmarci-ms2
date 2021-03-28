@@ -73,8 +73,8 @@
             <form>
                 <label for="username">Enter your name for the leaderboard: (optional)</label><br>
                 <input type="text" id="username" name="username">
+                <button type="submit" id="view-leaderboard" class="level-button" onclick="openLeaderBoard(event)" style="width: 170px;">View Leaderboard</button>            
             </form>
-            <button id="view-leaderboard" class="level-button" onclick="openLeaderBoard()" style="width: 170px;">View Leaderboard</button>            
             <button class="close level-button" onclick="closeVictoryModal()" style="width: 170px;">Close</button>
         </div>
     </div>
@@ -98,6 +98,7 @@
             <button class="close level-button" onclick="closeLeaderBoard()">Close</button>
         </div>
     </div>
+    
     </main>    
     
     <script src="assets/js/script.js"></script>
