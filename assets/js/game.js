@@ -137,8 +137,9 @@ function checkForMatch() {
         document.getElementById('match-counter').innerHTML = matchCounter; 
         updateProgressBar(progressBar, matchCounter / (numberOfCards / 2) * 100);             
         if (matchCounter === numberOfCards / 2 ) {
-            // Game won           
-             
+            // Game won    
+              
+            saveHighScore(); 
             setTimeout( () => {
                 victorySound.play();
                 victoryModal.classList.add('show'); // showing victory modal
@@ -278,4 +279,21 @@ audio.addEventListener('click', () => {
 
 /* ----- HIGH SCORES ------ */
 
-let savedHighScores = sessionStorage.getItem('highScoreList') || '[]'; 
+let username = document.getElementById('username');
+/* const mostRecentScore = localStorage.getItem("mostRecentScore"); */
+let highScores = JSON.parse(sessionStorage.getItem("highScores")) || []; 
+
+function saveHighScore() {
+    let score = {
+        moves: moveCounter,
+        name: username.value
+    };
+    highScores.push(score);
+    highScores.sort((a, b) => {
+        return a.moves - b.moves;
+    });
+    /* highScores.splice(5); // only show the top 5 */
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    console.log(highScores);
+}
+
