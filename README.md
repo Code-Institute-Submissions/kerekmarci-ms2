@@ -118,7 +118,6 @@ Colour palette
 
 Since the website features the game and has very little number of pages (3) and text content, one main font was used throughout. 
 Only the timer uses a different font to create the  feel of the classic 7-segment displays.
-
     * Main font is called *DM Sans*
     * Font of the time is called *Digital*
 
