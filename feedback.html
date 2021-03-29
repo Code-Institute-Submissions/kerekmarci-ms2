@@ -6,6 +6,17 @@
     <title>Memory Game</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://kit.fontawesome.com/995f2f52cf.js" crossorigin="anonymous"></script>
+    
+    <!-- ************* EMAIL.JS **************  -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {             
+            emailjs.init('user_O6mXidwM3yvekV0ewJkCZ');
+        })();
+    </script>    
+   
+
 </head>
 <body>
     <main>    
@@ -24,11 +35,9 @@
             <hr>
             <h3 class="center">-- Please share your thoughts on this game! --</h3>
             <hr>
-        </div>
+        </div>        
 
-        
-
-        <form>
+        <form id="contact-form" onsubmit="return sendMail(this);">
             <div id="form-questions">
                 <h2 class="center">First a little bit about you:</h2>
                 <label for="male">Male</label>
@@ -45,20 +54,21 @@
                 <h2>How would you rate?</h2>
                 
                 <label for="easeOfUse">Ease of Use</label><br>
-                <input type="range" min="1" max="10" value="8" class="slider" id="easeOfUse" oninput="this.nextElementSibling.value = this.value">                  
+                <input type="range" name="easeOfUse" min="1" max="10" value="8" class="slider" id="easeOfUse" oninput="this.nextElementSibling.value = this.value">                  
                 <output>8</output>
                 
                 <br>
                 <label for="gameExperience">Game Experience</label><br>
-                <input type="range" min="1" max="10" value="8" class="slider" id="gameExperience" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" name="gameExperience" min="1" max="10" value="8" class="slider" id="gameExperience" oninput="this.nextElementSibling.value = this.value">
                 <output>8</output>
                 <br>
                 <label for="siteLayout">Site layout</label><br>
-                <input type="range" min="1" max="10" value="8" class="slider" id="siteLayout" oninput="this.nextElementSibling.value = this.value">
+                <input type="range" name="siteLayout" min="1" max="10" value="8" class="slider" id="siteLayout" oninput="this.nextElementSibling.value = this.value">
                 <output>8</output>
 
                 <br>
             </div>
+            
             <button type="submit" value="Submit" class="level-button home-button">SUBMIT</button>
         
         </form>
@@ -70,5 +80,6 @@
 
 
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/sendEmail.js"></script>
 </body>
 </html>
