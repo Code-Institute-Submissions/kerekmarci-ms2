@@ -5,35 +5,40 @@
 This website for created as my 2nd Milestone Project at the Code Institute. 
 The website will showcase the languages and tools learned so far, which are HTML5, CSS3 and JavaScript.
 
-![Photo of the finished website](https://github.com/kerekmarci/ms2/assets/docs/website_showcase.jpg)
+![Photo of the finished website](https://github.com/kerekmarci/ms2/blob/master/assets/docs/website_showcase.JPG)
 
 ---
 
 ## Description
 
-xxx
+The website presents a pattern-matching memory game, fun way of using our memory to find matching pairs of cards, written in JavaScript.
 
 ---
 
 ## User Experience
 
-xxx
+The website uses straightforward and intuitive navigation. After the introduction of the rules, the user can proceed to the game area by pressing the ‘Go to game’ button. 
+At the game area the user can select among easy, medium and hard levels (by pressing the respective buttons). During the game, the time and number of steps are measured. 
+At the end of the game, the user can add him/herself onto the leader board, and also able to leave a feedback if wishes.
 
 ### Strategy
 
-xxx
-
-Demography:
-
-xxx
+The main goal of this 2nd Milestone project was to build an interactive website using JavaScript. Therefore, the strategy was to develop a game suitable for both children and adults:
+ for children, this intuitive game is both a challenge and fun to find matching cars, for adults, this can be used as a brain-sharpener, but for many of us, 
+ this type of game brings back childhood memories.
 
 User stories:
 
-xxx
+As a user...,
 
-Business goals: 
+* I would like to use a website that is intuitive and easy to navigate
+* I would enjoy being on a website that is aesthetic 
+* I would like to play a game that improves my memory
+* I would like to play a game that is fun
+* I would like to see my results at the end of the game
+* I would like to compare my results with others
+* I would like to be able to leave feedback on the game
 
-xxx
 
 ### Scope
 
