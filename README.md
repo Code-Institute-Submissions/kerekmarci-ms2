@@ -42,19 +42,50 @@ As a user...,
 
 ### Scope
 
-xxx
+The scope of this website and this milestone project was to learn the foundations of JavaScript and to create my first interactive website. 
+At the same time, I wanted to add functionalities that are interesting for the user, therefore the scope of the website will be showcasing the following:
+
+* Create a visually appealing website featuring a memory game
+* Provide different difficulty levels for the user
+* Offer statistics where the user can measure their performance, such as a timer and a counter on the number of steps
+* Present the progress of the game with an interactive progress bar
+* Offer the user the option to choose between two different colour themes
+* Play sound during the game, with an option for the user to mute
+* Offer the user to input his/her name and compare the results with other on a leader board
+* Provide a feedback page for the user to send feedback to the developer (me)
+
 
 ### Structure
 
-xxx
+The website will feature the following:
 
 #### Main page: 
 
-xxx
+* A welcome message to the game
+* A description of the game how to play 
+* A button to proceed to the game area
+* Toggle to swap between dark and light colour themes 
 
-#### Other pages:
+#### Game area:
 
-xxx
+* Button to select level (easy, medium, hard)
+* Timer to show the time elapsed
+* Cards for the game in the main area in the middle
+* Counter to show the number of moves and matches
+* Interactive progress bar
+* Option to restart game by pressing on the level button
+* Toggle to swap between dark and light colour themes
+* Button to mute sound
+* Button to return to home page and to advance to a feedback page
+
+#### Feedback page:
+
+* Gather basic anonym information on the user such as gender and age
+* Rating of the website on
+    * Ease of Use
+    * Game Experience
+    * Site Layout
+* Toggle to swap between dark and light colour themes
 
 ### Skeleton
 
