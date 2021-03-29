@@ -215,7 +215,26 @@ xxx
 
 ### Testing user stories
 
-1. As a user, I ...
+1. I would like to use a website that is intuitive and easy to navigate\
+    *The website uses a straightforward design, and the buttons are placed at a visible place. All functionalities can be accessed within two clicks.*
+
+2. I would enjoy being on a website that is aesthetic\
+    *The font is easy to *
+
+3. I would like to play a game that improves my memory\
+    **
+
+4. I would like to play a game that is fun\
+    **
+
+5. I would like to see my results at the end of the game\
+    **
+
+6. I would like to compare my results with others\
+    **
+
+7. I would like to be able to leave feedback on the game\
+    **
 
 ### Validation
 
@@ -231,6 +250,7 @@ In this section I would like to give credit to all these tools, sources and help
 
 * This video on YouTube was very inspiring to build to foundations of the JavaScript concept: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1099s 
     * The main functionalities I applied from the video: iterating through lists with forEach, adding and removig classes (flip), using backface-visibility in CSS, applying data-set on cards
+    * Functions used with adoption to my project: flipCard(), checkForMatch(), disableCards(), unFlipCards(), resetBoard(), shuffle()
 * Creating a timer: https://www.youtube.com/watch?v=oY8V6GuZrkM&t=534s
     * This is a complete stopwatch, but demonstrates the logic well, especially how to put 0 in front of the single-digit minute counter
 * Stack overflow: https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array
