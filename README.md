@@ -116,8 +116,15 @@ Colour palette
 
 * **Typography:**
 
-xxx
+Since the website features the game and has very little number of pages (3) and text content, one main font was used throughout. 
+Only the timer uses a different font to create the  feel of the classic 7-segment displays.
 
+* Main font is *DM Sans*
+* Font of the time is called *Digital*
+
+* **Icons:**
+
+FontAwesome icons are used for the theme toggle between dark and light modes and for the mute button.
 
 ---
 
@@ -129,32 +136,57 @@ Below is the overview of the main features of the website:
 
 Player can choose among 3 levels and the number of cards will be displayed accordingly:
  * Easy: 12 cards
- * Medium: 20 cards 
- * Hard: 30 cards
+ * Medium: 24 cards 
+ * Hard: 36 cards
+
+The levels can be selected by pressing on the button respective to the level, and these buttons also allow user to restart the game.
 
 ### Aminated cards
 
-A pleasant, user-friendly animation is played when cards are flipped.
+To improve user experience, some interactive elements have been added to the game.
+
+* When user hovers over the back of the card, the brightness increases by 10%
+* When user clicks on the card, it gradually shrinks (by 3%), creating a *feel* of click for the user
+* After clicking, the card flips with an animation
+
+### Sound effects
+
+There is a variety of short sound effects played during the game:
+
+* A *flip sound* when the cards are flipped
+* A *happy sound* when user finds a matching pair
+* A sound of *error* when user does not find a match
+* A sound of *victory* at the end of the game
+
+During the game, a mute button is available in the top right corner for the user to be able to mute.
 
 ### Counter
 
-The counter will count the time passed since the start of the game. 
+The counter will count the time passed from the start of the game. This is displayed in a classic-styled timer that looks like the traditional 7-segment LCD displays.
 
 ### Progress bar
 
-A colourful progress bar is shown to display the actual progress of the user within the game, displayed numerically in percentage as well as visually in the bar.
+A colourful progress bar is shown to display the actual progress of the user within the game, displayed visually in the bar. When user gets closer to victory (finds a matching pair), 
+the progress bar fills with a subtle animation.
 
-### Victory pop-up
+### Option to restart the game 
 
-In case of a victory (all pairs found), a window pops up with the quick stats. Option for the user to input username and see his/her position on the leaderboard.
+User can start a new game anytime by pressing the respective level button.
 
-### Leaderboard (high scores display)
+### Pop-up modals: victory and leader board
 
-User will be put in the leaderboard based in his/her ranking compared to other users.
+In case of a victory (all pairs found), a window pops up congratulating the user. There is an option for the user to input username and see his/her position on the leader board.
+*Note: the website does not have back-end functionality, and the user can compare the results achieved within the same session. By default, 4 users have been defined to 
+compare user results with.*
+
+### Theme toggle 
+
+On every page, there is a toggle on the top left corner for the user to choose between dark and light themes. The site remembers the choice within the current session.
 
 ### Feedback form
 
-User will be able to provide feedback on the game and form will be sent using EmailJS. There are various options available, fields, ranges and radio buttons.
+User will be able to provide feedback on the game and the form is sent using EmailJS. 
+User is asked for age and gender, and can rate the ease of use, game experience and site layout from 1 to 10 with a slider.
 
 ---
 
