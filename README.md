@@ -224,6 +224,21 @@ xxx
 
 ---
 
+## Credits
+
+During the development process, I used existing games to get inspiration from, read articles and forums, plus watched YouTube videos. 
+In this section I would like to give credit to all these tools, sources and help that contributed to the success of my project:
+
+* This video on YouTube was very inspiring to build to foundations of the JavaScript concept: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1099s 
+    * The main functionalities I applied from the video: iterating through lists with forEach, adding and removig classes (flip), using backface-visibility in CSS, applying data-set on cards
+* Creating a timer: https://www.youtube.com/watch?v=oY8V6GuZrkM&t=534s
+    * This is a complete stopwatch, but demonstrates the logic well, especially how to put 0 in front of the single-digit minute counter
+* Stack overflow: https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array
+    * The logic to pick random cards from an array
+* My mentor at Code Institute Nishant Kumar who encouraged me to implement all these features
+
+---
+
 ## Deployment
 
 The website was deployed to *GitHub* that is hosting the site, and is available to view at https://kerekmarci.github.io/ms2/ \
