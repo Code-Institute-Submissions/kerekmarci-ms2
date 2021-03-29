@@ -5,7 +5,7 @@
 This website for created as my 2nd Milestone Project at the Code Institute. 
 The website will showcase the languages and tools learned so far, which are HTML5, CSS3 and JavaScript.
 
-
+![Photo of the finished website](https://github.com/kerekmarci/ms2/assets/docs/website_showcase.jpg)
 
 ---
 
