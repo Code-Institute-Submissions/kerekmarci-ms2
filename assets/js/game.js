@@ -128,6 +128,7 @@ function displayCards() {
     startTimer(); 
 }
 
+/* Inspiration for this logic: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1099s (accessed: 15.03.2021) */
 function flipCard() {
     if (lockBoard) return;
     if (this === firstCard) return; // to avoid a match if user clicks on the same card twice
@@ -207,6 +208,7 @@ function shuffle() {
 };
 
 // ******* TIMER *******
+// Inspiration gained from: https://www.youtube.com/watch?v=oY8V6GuZrkM&t=534s (accessed 18.03.2021) 
 
 var s;
 var m;
@@ -291,8 +293,7 @@ function saveHighScore() {
         return a.moves - b.moves;
     });
     /* highScores.splice(5); // only show the top 5 */
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-    console.log(highScores);
+    localStorage.setItem("highScores", JSON.stringify(highScores));   
 }
 
 
