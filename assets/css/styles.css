@@ -8,7 +8,9 @@
 * {
     box-sizing: border-box;
 }
-  
+
+/* --------- THEMES AND ROOT ELEMENTS --------- */
+
 :root {
     --main-font: 'DM Sans', sans-serif;
     --timer--font: 'Digital', monospace;
@@ -38,22 +40,13 @@
     --background-dark: #A9A9A9;
     --background-lightdark: #bababa;
     --background-lighter-dark: #A9A9A9;
-    --main-highlight: rgb(39, 90, 80);
-    --main-complimentary-color: rgb(8, 128, 78);
+    --main-highlight: #275A50;
+    --main-complimentary-color: #08804E;
     --modal-background: #A9A9A9;
     --text-color: #20222E;
 }
 
-/*
-    --background-light: #A9A9A9;
-    --background-light-neutral: #bababa;
-    --background-light-lightest: #FFFFFF;
-    --main-highlight-light: #FF3B3F;
-    --main-complimentary-color-light: #CAEBF2;
-    --text-color-light-theme: #20222E;
-    --main-complimentary-color-light: #177400;
-*/
-
+/* --------- COMMON CSS OF PAGES --------- */
 
 body {    
     background: var(--background-dark);   
@@ -64,14 +57,6 @@ body {
     width: 45vw;
     margin: auto;   
 }
-/*
-body.light {
-    --background-dark: var(--background-light); 
-    --background-lightdark: var(--background-light-neutral);
-    --main-highlight: var(--main-highlight-light);
-    --text-color-dark-theme: var(--text-color-light-theme);  
-    --main-complimentary-color: var(--main-complimentary-color-light);
-} */
 
 main {
     background: var(--background-lightdark);
@@ -110,13 +95,25 @@ ul {
     margin-bottom: 20px;
 }
 
-.highlight {
-    color: var(--main-highlight);
+small {
+    font-style: italic;       
 }
 
-#game-area-placeholder {
-    color: var(--background-dark);
-    font-size: 4rem;
+#landing-page-main {
+    max-width: 600px;
+    margin: auto;    
+}
+
+#landing-page-bottom {
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: var(--main-highlight);
 }
 
 .center {
@@ -131,20 +128,26 @@ hr {
     border: 0;
     margin: auto;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), var(--main-highlight), rgba(255, 255, 255, 0));    
-} 
-  
+}   
 
-#landing-page-main {
-    max-width: 600px;
+/* --------- MEMORY GAME AREA AND CARD ANIMATIONS --------- */
+
+#memory-game-area {        
     margin: auto;    
+    display: grid;        
+    grid-Template-Columns: repeat(4, auto); 
+    justify-content: center;          
 }
 
-#landing-page-bottom {
-    margin-bottom: 20px;
+#game-area-placeholder {
+    color: var(--background-dark);
+    font-size: 4rem;
 }
 
-.welcome h1 {
-    margin-bottom: 40px;
+#timer {
+    font-family: var(--timer--font);
+    color: var(--main-complimentary-color);
+    font-size: 1.5rem;
 }
 
 .game-info {
@@ -164,13 +167,7 @@ hr {
     margin: 20px;
 }
 
-#memory-game-area {   
-     
-    margin: auto;    
-    display: grid;        
-    grid-Template-Columns: repeat(4, auto); 
-    justify-content: center;          
-}
+/* Inspiration for front and back face methodology: https://www.youtube.com/watch?v=ZniVgo8U7ek&t=1099s */
 
 .card {      
     position: relative;    
@@ -232,6 +229,8 @@ hr {
     opacity: 1;
 }
 
+    /* --------- BUTTON STYLING --------- */
+
 .level-button {
     border: 3px solid var(--main-highlight);
     font: var(--main-font);
@@ -263,22 +262,9 @@ hr {
 
 .home-button {
     width: 214px;
-    margin-top: 5px;
-    
+    margin-top: 5px;    
 }
 
-#timer {
-    font-family: var(--timer--font);
-    color: var(--main-complimentary-color);
-    font-size: 1.5rem;
-}
-
-
-
-small {
-    font-style: italic;    
-    
-}
 
 /* ----- THEME TOGGLE ------ */
 
@@ -354,8 +340,6 @@ small {
 .fa-volume-mute.show {
     opacity: 1;
 }
-
-
 
 /* ----- PROGRESS BAR ------ */
 
@@ -453,8 +437,6 @@ input[type=text] {
     margin-bottom: 10px;
     height: 26px;
 }
-
-
 
 /* ----- FEEDBACK FORM ------ */
 
