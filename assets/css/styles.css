@@ -38,7 +38,7 @@
     --background-dark: #A9A9A9;
     --background-lightdark: #bababa;
     --background-lighter-dark: #A9A9A9;
-    --main-highlight: #FF3B3F;
+    --main-highlight: rgb(39, 90, 80);
     --main-complimentary-color: rgb(8, 128, 78);
     --modal-background: #A9A9A9;
     --text-color: #20222E;
@@ -57,7 +57,7 @@
 
 body {    
     background: var(--background-dark);   
-    color: #fff;    
+    color: var(--text-color);    
     font-family: var(--main-font);
     margin: 0;
     padding: 0;
@@ -515,7 +515,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 17px;
   height: 17px;
   background: var(--background-lightdark);
-  border: 1.7px solid rgba(255, 255, 255, 0);
+  border: 1.7px solid #000;
   border-radius: 50px;
   cursor: pointer;
   -webkit-appearance: none;
@@ -538,7 +538,7 @@ input[type=range]::-moz-range-thumb {
   width: 17px;
   height: 17px;
   background: var(--background-lightdark);
-  border: 1.7px solid rgba(255, 255, 255, 0);
+  border: 1.7px solid #000;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -569,7 +569,7 @@ input[type=range]::-ms-thumb {
   width: 17px;
   height: 17px;
   background: var(--background-lightdark);
-  border: 1.7px solid rgba(255, 255, 255, 0);
+  border: 1.7px solid #000;
   border-radius: 50px;
   cursor: pointer;
   margin-top: 0px;
