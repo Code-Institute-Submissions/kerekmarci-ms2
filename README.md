@@ -215,6 +215,19 @@ JavaScript code written is understood by different browsers.
 After that, I wanted the site to be responsive and that the design/layout loads aesthetically on various devices with different screen size. 
 The wireframes show the plan how the site is intented to look an wider and smaller-screen devices.
 
+### Testing cross-browser compatibility 
+
+Other then testing with desktops, laptops and mobile phones available at myself and friends, a Cross Browser Testing Cloud called Lambdatest was used to simulate real-time testing. 
+The website is available at https://www.lambdatest.com/ \
+This website is able to simulate various types of browsers (Google Chrome, Firefox, Opera, etc.) in various versions and screen resolution real-time, so that I was able to ensure 
+that all functionalities work in different environments. These tests mostly showed the desired result, except from one problem with the card flips in Firefox. This has been 
+fixed, and is more detailed below in the bugs section.
+
+### Testing responsiveness
+
+A website called http://responsivetesttool.com/ provides a quick and easy way to display a website in mobile, desktop and tablet views in the most common resolutions, including 
+landscape and portrait views. Due to the media queries added, the website was able to successfully resize to various screen sizes.
+
 ### Testing user stories
 
 1. I would like to use a website that is intuitive and easy to navigate\
@@ -225,7 +238,7 @@ The wireframes show the plan how the site is intented to look an wider and small
     in a colour palette to see that they look nice and compliment each other well*
 
 3. I would like to play a game that improves my memory\
-    *To solve the game fast, it requires memory to remember the cards. In addition to that, there are 3 different levels available. *
+    *To solve the game fast, it requires memory to remember the cards. In addition to that, there are 3 different levels available.*
 
 4. I would like to play a game that is fun\
     *This type of game was played by most of us during childhood, therefore it brings back memories. The animation, timer, move counter and progress bar will help 
