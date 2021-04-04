@@ -104,13 +104,16 @@ The skeleton of the website is available in the below wireframes, for both deskt
 xxxx
 
 * **Colours:**
-xxx
 
+The colour palette can be seen here.\
+\
+Dark mode:\
 
-The colours in a pallette can be seen here:
+![Colour palette for dark mode](https://github.com/kerekmarci/ms2/blob/master/assets/docs/color_palette_dark.JPG)
 
-Colour palette 
+Light mode:\
 
+![Colour palette for light mode](https://github.com/kerekmarci/ms2/blob/master/assets/docs/color_palette_light.JPG)
 
 
 * **Typography:**
@@ -201,6 +204,10 @@ User is asked for age and gender, and can rate the ease of use, game experience 
 * Balsamiq: an industry standard low-fidelity wireframing tool
 * Google Fonts: for providing stylish fonts across the website
 
+### Integration
+
+* Email.JS: client-side Javascript code service on the feedback page to send email
+
 ### Version control
 
 * Github: is used to store all codes and host the website 
@@ -283,7 +290,7 @@ After research, I discovered that I needed to set up an initial 0-degree transfo
 ### Note to functionality
 
 It must be added to this documentation that some features have limited functionalities.\
-This Milestone project only uses front-end techniques, therefore unable to store data beyond a session. Therefore, the leader board is initially filled with fictional players and figures, 
+This Milestone project only uses front-end techniques, therefore unable to store data beyond a session. Therefore, the leader board is initially filled with fictional players and results, 
 however, the system is able to rank the user result among these hard-coded players. If the user plays another game within the same browser session, it will add to the leader board 
 and will be able to compare the scores with the prevous game result, but the results will be lost at the end of the session. 
 
