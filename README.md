@@ -228,6 +228,14 @@ fixed, and is more detailed below in the bugs section.
 A website called http://responsivetesttool.com/ provides a quick and easy way to display a website in mobile, desktop and tablet views in the most common resolutions, including 
 landscape and portrait views. Due to the media queries added, the website was able to successfully resize to various screen sizes.
 
+### Testing mobile-friendliness
+
+For this test, Google's mobile friendly test was used: https://search.google.com/test/mobile-friendly \
+
+The result shown was:\
+Page is mobile friendly\
+This page is easy to use on a mobile device
+
 ### Testing user stories
 
 1. I would like to use a website that is intuitive and easy to navigate\
@@ -251,10 +259,27 @@ landscape and portrait views. Due to the media queries added, the website was ab
 6. I would like to be able to leave feedback on the game\
     *There is a designated feedback page available where user can submit their feedback and rate the ease of use, game experience and site layout.*
 
+### Bugs discovered
+
+There was an interesting bug discovered in Firefox browsers: when the user clicks on the card and it flips to front face, the card would return back immediately 
+as soon as the user moves the mouse from the card, which distroyed the whole functionality.\
+As a first step, I tried to locate which part of the code could cause the issue. To rotate the card, a class called .card.flip is added to the card (div element)
+'transform: rotateY(180deg);' in CSS. I identified that the error would be coming from this tranformation, however, the logic seemed correct because it worked well in all other 
+browsers.\
+\
+As a first step, I added the browser prefixes to all classes containing 'transform', such as 
+    - transform: rotateY(180deg);
+    - -ms-transform: rotateY(180deg);
+    - -o-transform: rotateY(180deg);
+    - -moz-transform: rotateY(180deg);
+    - -webkit-transform: rotateY(180deg);\
+however, it did not solve the problem.
+
+
 ### Validation
 
-* Jigsaw 
-* W3C for HTML
+* Jigsaw: validation passed with no error found.
+* W3C for HTML: validation passed with no error found.
 
 ---
 
