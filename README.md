@@ -109,35 +109,36 @@ container is used to contain information to keep text aligned to the middle, to 
 A little challenge to overcome was the display of the cards. First, it needed to be responsive to various screen sizes, secondly, I did not want to leave an incomplete row at the 
 bottom (when a row is not finished with cards). This would be easier if there was a fixed amount of cards, however, the user can choose among three levels which made responsiveness 
 more complex.\
+\
 I wanted to avoid resizing the same screen to all sizes, otherwise the cards would have been too small on mobile devices which would have caused an issue with accessibility. 
 Therefore the solution I applied is to adjust the number of columns based on screen width, starting with 4, then reducing to 3, 2 and 1.\
+\
 To avoid incomplete rows, the easy level displays 12 cards, the medium level 24 cards and the hard level 36 cards, and all of these numbers can be divided by 2, 3 and 4, 
 so there will never be an incomplete row of cards.
 
-
 * **Theme:**
 
-A dark background can add a dynamic feel to the website, therefore I chose to have a dark landing page. Further idea was to select colours that compliment dark colours well, and the colours I selected are grey, white and a variant of red.
+To make the site more interesting for the user, two different themes have been applied: a dark theme and a light theme, with a switch toggle in the top left corner. 
+For both colour themes, the colours have been planned with a colour palette to ensure the colours are consistent and complement each other.
 
 * **Colours:**
 
 The colour palette can be seen here.\
 \
-Dark mode:\
+Dark mode:
 
 ![Colour palette for dark mode](https://github.com/kerekmarci/ms2/blob/master/assets/docs/color_palette_dark.JPG)
 
-Light mode:\
+Light mode:
 
 ![Colour palette for light mode](https://github.com/kerekmarci/ms2/blob/master/assets/docs/color_palette_light.JPG)
-
 
 * **Typography:**
 
 Since the website features the game and has very little number of pages (3) and text content, one main font was used throughout. 
 Only the timer uses a different font to create the  feel of the classic 7-segment displays.
-    * Main font is called *DM Sans*
-    * Font of the time is called *Digital*
+    * Main font is called DM Sans
+    * Font of the time is called Digital
 
 * **Icons:**
 
@@ -266,7 +267,7 @@ The result shown was:\
 
 2. I would enjoy being on a website that is aesthetic\
     *The font is easy to read and suitable for this amount of text. The colours used for the light and dark colour schemes have been selected carefully and put together 
-    in a colour palette to see that they look nice and compliment each other well*
+    in a colour palette to see that they look nice and complement each other well*
 
 3. I would like to play a game that improves my memory\
     *To solve the game fast, it requires memory to remember the cards. In addition to that, there are 3 different levels available.*
