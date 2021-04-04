@@ -263,8 +263,8 @@ This page is easy to use on a mobile device
 
 There was an interesting bug discovered in Firefox browsers: when the user clicks on the card and it flips to front face, the card would return back immediately 
 as soon as the user moves the mouse from the card, which distroyed the whole functionality.\
-As a first step, I tried to locate which part of the code could cause the issue. To rotate the card, a class called .card.flip is added to the card (div element)
-'transform: rotateY(180deg);' in CSS. I identified that the error would be coming from this tranformation, however, the logic seemed correct because it worked well in all other 
+As a first step, I tried to locate which part of the code could cause the issue. To rotate the card, a class called *.card.flip* is added to the card (div element)
+*transform: rotateY(180deg);* in CSS. I identified that the error would be coming from this tranformation, however, the logic seemed correct because it worked well in all other 
 browsers.\
 \
 As a first step, I added the browser prefixes to all classes containing 'transform', such as 
@@ -273,8 +273,18 @@ As a first step, I added the browser prefixes to all classes containing 'transfo
 - o-transform: rotateY(180deg);
 - moz-transform: rotateY(180deg);
 - webkit-transform: rotateY(180deg);\
-however, it did not solve the problem.
+\
+however, it did not solve the problem.\
+\
+After research, I discovered that I needed to set up an initial 0-degree transform on the original cards and added a line of *transform:rotateX(0deg);* to the base classes 
+*.front-face, .back-face,* and this resolved the problem successfully.
 
+### Note to functionality
+
+It must be added to this documentation that some features have limited functionalities.\
+This Milestone project only uses front-end techniques, therefore unable to store data beyond a session. Therefore, the leader board is initially filled with fictional players and figures, 
+however, the system is able to rank the user result among these hard-coded players. If the user plays another game within the same browser session, it will add to the leader board 
+and will be able to compare the scores with the prevous game result, but the results will be lost at the end of the session. 
 
 ### Validation
 
