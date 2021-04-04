@@ -118,10 +118,10 @@ so there will never be an incomplete row of cards.\
 \
 Original display with 4 columns:\
 ![Original display with 4 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_4_columns.JPG)
-
+\
 Display with 3 columns:\
 ![Display with 3 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_3_columns.JPG)
-
+\
 Display with 2 columns:\
 ![Display with 2 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_2_columns.JPG)
 
