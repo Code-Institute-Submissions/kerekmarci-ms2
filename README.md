@@ -233,8 +233,8 @@ landscape and portrait views. Due to the media queries added, the website was ab
 For this test, Google's mobile friendly test was used: https://search.google.com/test/mobile-friendly \
 
 The result shown was:\
-Page is mobile friendly\
-This page is easy to use on a mobile device
+*Page is mobile friendly*\
+*This page is easy to use on a mobile device*
 
 ### Testing user stories
 
@@ -272,7 +272,7 @@ As a first step, I added the browser prefixes to all classes containing 'transfo
 - ms-transform: rotateY(180deg);
 - o-transform: rotateY(180deg);
 - moz-transform: rotateY(180deg);
-- webkit-transform: rotateY(180deg);\
+- webkit-transform: rotateY(180deg);
 \
 however, it did not solve the problem.\
 \
