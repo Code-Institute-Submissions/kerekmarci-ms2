@@ -36,7 +36,6 @@ As a user...,
 * I would like to play a game that improves my memory
 * I would like to play a game that is fun
 * I would like to see my results at the end of the game
-* I would like to compare my results with others
 * I would like to be able to leave feedback on the game
 
 
@@ -211,7 +210,10 @@ User is asked for age and gender, and can rate the ease of use, game experience 
 
 ## Testing
 
-xxx
+There has been a variety of testings carried out on the website. One of the most important part of testing was that it works on various platforms, and the 
+JavaScript code written is understood by different browsers.
+After that, I wanted the site to be responsive and that the design/layout loads aesthetically on various devices with different screen size. 
+The wireframes show the plan how the site is intented to look an wider and smaller-screen devices.
 
 ### Testing user stories
 
@@ -219,22 +221,22 @@ xxx
     *The website uses a straightforward design, and the buttons are placed at a visible place. All functionalities can be accessed within two clicks.*
 
 2. I would enjoy being on a website that is aesthetic\
-    *The font is easy to *
+    *The font is easy to read and suitable for this amount of text. The colours used for the light and dark colour schemes have been selected carefully and put together 
+    in a colour palette to see that they look nice and compliment each other well*
 
 3. I would like to play a game that improves my memory\
-    **
+    *To solve the game fast, it requires memory to remember the cards. In addition to that, there are 3 different levels available. *
 
 4. I would like to play a game that is fun\
-    **
+    *This type of game was played by most of us during childhood, therefore it brings back memories. The animation, timer, move counter and progress bar will help 
+    make the game as much fun as possible.*
 
 5. I would like to see my results at the end of the game\
-    **
+    *At the end of the game, the player have the opportunity to see the result on a leaderboard in comparison with other players. (NOTE: this game only uses 
+    front-end techniques, therefore the results are stored only for the current session, and by default, it is compared with fictional players.)*
 
-6. I would like to compare my results with others\
-    **
-
-7. I would like to be able to leave feedback on the game\
-    **
+6. I would like to be able to leave feedback on the game\
+    *There is a designated feedback page available where user can submit their feedback and rate the ease of use, game experience and site layout.*
 
 ### Validation
 
@@ -255,6 +257,11 @@ In this section I would like to give credit to all these tools, sources and help
     * This is a complete stopwatch, but demonstrates the logic well, especially how to put 0 in front of the single-digit minute counter
 * Stack overflow: https://www.tutorialspoint.com/javascript-how-to-pick-random-elements-from-an-array
     * The logic to pick random cards from an array
+* Theme toggle: the below two YouTube videos were helpful in the concepts, and after that I had to merge some of the techniques
+    * https://www.youtube.com/watch?v=xodD0nw2veQ
+    * https://www.youtube.com/watch?v=PD89iMr50Mw&t=400s
+* Email.JS 
+    * I have applied the learnings from the relevant lessons at the Code Institue material, demonstrated by Matt Rudge 
 * My mentor at Code Institute Nishant Kumar who encouraged me to implement all these features
 
 ---
