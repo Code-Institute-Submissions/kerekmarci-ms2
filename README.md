@@ -272,11 +272,11 @@ As a first step, I added the browser prefixes to all classes containing 'transfo
 - ms-transform: rotateY(180deg);
 - o-transform: rotateY(180deg);
 - moz-transform: rotateY(180deg);
-- webkit-transform: rotateY(180deg);\
+- webkit-transform: rotateY(180deg);
 
 
-however, it did not solve the problem.\
-
+however, it did not solve the problem.
+\
 After research, I discovered that I needed to set up an initial 0-degree transform on the original cards and added a line of *transform:rotateX(0deg);* to the base classes 
 *.front-face, .back-face,* and this resolved the problem successfully.
 
