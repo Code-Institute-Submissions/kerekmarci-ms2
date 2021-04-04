@@ -116,13 +116,13 @@ Therefore the solution I applied is to adjust the number of columns based on scr
 To avoid incomplete rows, the easy level displays 12 cards, the medium level 24 cards and the hard level 36 cards, and all of these numbers can be divided by 2, 3 and 4, 
 so there will never be an incomplete row of cards.\
 \
-Original display with 4 columns:
+Original display with 4 columns:\
 ![Original display with 4 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_4_columns.JPG)
 
-Display with 3 columns:
+Display with 3 columns:\
 ![Display with 3 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_3_columns.JPG)
 
-Display with 2 columns:
+Display with 2 columns:\
 ![Display with 2 columns](https://github.com/kerekmarci/ms2/blob/master/assets/docs/responsive_2_columns.JPG)
 
 * **Theme:**
