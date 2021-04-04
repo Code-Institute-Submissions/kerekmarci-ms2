@@ -101,8 +101,23 @@ Therefore, there is no need to add a separate wireframe for mobile devices.
 
 ### Surface
 
+* **Planning of layout:**
+
+Although the website contains little information, it is always my goal to show content in a visually appealing way. To adapt to the wide desktop screens well, a smaller 
+container is used to contain information to keep text aligned to the middle, to avoid the text being distributed too wide.\
+\
+A little challenge to overcome was the display of the cards. First, it needed to be responsive to various screen sizes, secondly, I did not want to leave an incomplete row at the 
+bottom (when a row is not finished with cards). This would be easier if there was a fixed amount of cards, however, the user can choose among three levels which made responsiveness 
+more complex.\
+I wanted to avoid resizing the same screen to all sizes, otherwise the cards would have been too small on mobile devices which would have caused an issue with accessibility. 
+Therefore the solution I applied is to adjust the number of columns based on screen width, starting with 4, then reducing to 3, 2 and 1.\
+To avoid incomplete rows, the easy level displays 12 cards, the medium level 24 cards and the hard level 36 cards, and all of these numbers can be divided by 2, 3 and 4, 
+so there will never be an incomplete row of cards.
+
+
 * **Theme:**
-xxxx
+
+A dark background can add a dynamic feel to the website, therefore I chose to have a dark landing page. Further idea was to select colours that compliment dark colours well, and the colours I selected are grey, white and a variant of red.
 
 * **Colours:**
 
