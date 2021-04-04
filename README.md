@@ -27,7 +27,7 @@ The main goal of this 2nd Milestone project was to build an interactive website 
  for children, this intuitive game is both a challenge and fun to find matching cars, for adults, this can be used as a brain-sharpener, but for many of us, 
  this type of game brings back childhood memories.
 
-User stories:
+### User stories:
 
 As a user...,
 
@@ -69,7 +69,7 @@ The website will feature the following:
 
 * Button to select level (easy, medium, hard)
 * Timer to show the time elapsed
-* Cards for the game in the main area in the middle
+* Cards for the game placed in the main area in the middle
 * Counter to show the number of moves and matches
 * Interactive progress bar
 * Option to restart game by pressing on the level button
@@ -88,15 +88,16 @@ The website will feature the following:
 
 ### Skeleton
 
-The skeleton of the website is available in the below wireframes, for both desktop and mobile view:
+The skeleton of the website is available in the below wireframes:
 
-**Desktop wireframes**
+1. [Index page](https://github.com/kerekmarci/ms2/blob/master/wireframes/01Landing_page.png)
+2. [Game area](https://github.com/kerekmarci/ms2/blob/master/wireframes/02Game_area.png)
+3. [Victory modal](https://github.com/kerekmarci/ms2/blob/master/wireframes/03Victory.png)
+3. [Leader Board modal](https://github.com/kerekmarci/ms2/blob/master/wireframes/04Leaderboard.png)
+3. [Feedback page](https://github.com/kerekmarci/ms2/blob/master/wireframes/05Feedback.png)
 
-
-
-**Mobile wireframes**
-
-
+Due to the simplicity of the layout, for mobile view, it will remain the same just the width will be adjusted and the number of coloumns in which the cards are displayed.
+Therefore, there is no need to add a separate wireframe for mobile devices.
 
 ### Surface
 
