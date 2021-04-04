@@ -268,11 +268,11 @@ As a first step, I tried to locate which part of the code could cause the issue.
 browsers.\
 \
 As a first step, I added the browser prefixes to all classes containing 'transform', such as 
-    - transform: rotateY(180deg);
-    - -ms-transform: rotateY(180deg);
-    - -o-transform: rotateY(180deg);
-    - -moz-transform: rotateY(180deg);
-    - -webkit-transform: rotateY(180deg);\
+- transform: rotateY(180deg);
+- ms-transform: rotateY(180deg);
+- o-transform: rotateY(180deg);
+- moz-transform: rotateY(180deg);
+- webkit-transform: rotateY(180deg);\
 however, it did not solve the problem.
 
 
