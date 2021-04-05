@@ -2,8 +2,8 @@
 
 ## View live project here: [Memory game](https://kerekmarci.github.io/ms2/)
 
-This website for created as my 2nd Milestone Project at the Code Institute. 
-The website will showcase the languages and tools learned so far, which are HTML5, CSS3 and JavaScript.
+This website was created for my 2nd Milestone Project at the Code Institute. 
+The website will showcase the languages and tools I learned so far, namely HTML5, CSS3 and JavaScript.
 
 ![Photo of the finished website](https://github.com/kerekmarci/ms2/blob/master/assets/docs/website_showcase.JPG)
 
@@ -17,14 +17,14 @@ The website presents a pattern-matching memory game, fun way of using our memory
 
 ## User Experience
 
-The website uses straightforward and intuitive navigation. After the introduction of the rules, the user can proceed to the game area by pressing the ‘Go to game’ button. 
+The website uses straightforward and intuitive navigation. After the introduction of the rules on the main landing page, the user can proceed to the game area by pressing the ‘Go to game’ button. 
 At the game area the user can select among easy, medium and hard levels (by pressing the respective buttons). During the game, the time and number of steps are measured. 
 At the end of the game, the user can add him/herself onto the leader board, and also able to leave a feedback if wishes.
 
 ### Strategy
 
 The main goal of this 2nd Milestone project was to build an interactive website using JavaScript. Therefore, the strategy was to develop a game suitable for both children and adults:
- for children, this intuitive game is both a challenge and fun to find matching cars, for adults, this can be used as a brain-sharpener, but for many of us, 
+ for children, this intuitive game is both a challenge and fun to find matching cars, for adults, this can be used as a brain-sharpener, and for many of us  
  this type of game brings back childhood memories.
 
 ### User stories:
@@ -61,7 +61,7 @@ The website will feature the following:
 #### Main page: 
 
 * A welcome message to the game
-* A description of the game how to play 
+* A description on how to play the game
 * A button to proceed to the game area
 * Toggle to swap between dark and light colour themes 
 
@@ -72,7 +72,7 @@ The website will feature the following:
 * Cards for the game placed in the main area in the middle
 * Counter to show the number of moves and matches
 * Interactive progress bar
-* Option to restart game by pressing on the level button
+* Option to restart game by pressing the level button
 * Toggle to swap between dark and light colour themes
 * Button to mute sound
 * Button to return to home page and to advance to a feedback page
@@ -103,8 +103,8 @@ Therefore, there is no need to add a separate wireframe for mobile devices.
 
 * **Planning of layout:**
 
-Although the website contains little information, it is always my goal to show content in a visually appealing way. To adapt to the wide desktop screens well, a smaller 
-container is used to contain information to keep text aligned to the middle, to avoid the text being distributed too wide.\
+Although the website contains little information, it is always my goal to show the content in a visually appealing way. To adapt to the wide desktop screens well, a smaller 
+container is used to contain information and to keep text aligned to the middle, to avoid the text being distributed too wide.\
 \
 A little challenge to overcome was the display of the cards. First, it needed to be responsive to various screen sizes, secondly, I did not want to leave an incomplete row at the 
 bottom (when a row is not finished with cards). This would be easier if there was a fixed amount of cards, however, the user can choose among three levels which made responsiveness 
@@ -203,8 +203,8 @@ User can start a new game anytime by pressing the respective level button.
 ### Pop-up modals: victory and leader board
 
 In case of a victory (all pairs found), a window pops up congratulating the user. There is an option for the user to input username and see his/her position on the leader board.
-*Note: the website does not have back-end functionality, and the user can compare the results achieved within the same session. By default, 4 users have been defined to 
-compare user results with.*
+*Note: the website does not have back-end functionality, and the user can compare the results achieved within the same session. By default, 4 users have been defined with 
+fictional results to compare user results with.*
 
 ### Theme toggle 
 
@@ -244,9 +244,9 @@ User is asked for age and gender, and can rate the ease of use, game experience 
 ## Testing
 
 There has been a variety of testings carried out on the website. One of the most important part of testing was that it works on various platforms, and the 
-JavaScript code written is understood by different browsers.
+JavaScript code is understood by different browsers.
 After that, I wanted the site to be responsive and that the design/layout loads aesthetically on various devices with different screen size. 
-The wireframes show the plan how the site is intented to look an wider and smaller-screen devices.
+The wireframes show the plan how the site is intented to look in a browser.
 
 ### Testing cross-browser compatibility 
 
@@ -276,7 +276,7 @@ The result shown was:\
 
 2. I would enjoy being on a website that is aesthetic\
     *The font is easy to read and suitable for this amount of text. The colours used for the light and dark colour schemes have been selected carefully and put together 
-    in a colour palette to see that they look nice and complement each other well*
+    in a colour palette to see that they look nice and complement each other well.*
 
 3. I would like to play a game that improves my memory\
     *To solve the game fast, it requires memory to remember the cards. In addition to that, there are 3 different levels available.*
@@ -286,7 +286,7 @@ The result shown was:\
     make the game as much fun as possible.*
 
 5. I would like to see my results at the end of the game\
-    *At the end of the game, the player have the opportunity to see the result on a leaderboard in comparison with other players. (NOTE: this game only uses 
+    *At the end of the game, the player has the opportunity to see the result on a leaderboard in comparison with other players. (NOTE: this game only uses 
     front-end techniques, therefore the results are stored only for the current session, and by default, it is compared with fictional players.)*
 
 6. I would like to be able to leave feedback on the game\
@@ -316,7 +316,7 @@ After research, I discovered that I needed to set up an initial 0-degree transfo
 ### Note to functionality
 
 It must be added to this documentation that some features have limited functionalities.\
-This Milestone project only uses front-end techniques, therefore unable to store data beyond a session. Therefore, the leader board is initially filled with fictional players and results, 
+This Milestone project only uses front-end techniques and unable to store data beyond a session. Therefore, the leader board is initially filled with fictional players and results, 
 however, the system is able to rank the user result among these hard-coded players. If the user plays another game within the same browser session, it will add to the leader board 
 and will be able to compare the scores with the prevous game result, but the results will be lost at the end of the session. 
 
