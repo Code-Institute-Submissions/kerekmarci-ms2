@@ -67,8 +67,12 @@ main {
     position: relative;  
 }
 
-.margin-top {
+.mt5 {
     margin-top: 5px;
+}
+
+.mt35 {
+    margin-top: 35px;
 }
 
 h1 {
@@ -105,6 +109,7 @@ small {
 }
 
 #landing-page-bottom {
+    margin-top: 50px;
     margin-bottom: 20px;
 }
 
@@ -231,15 +236,24 @@ hr {
 
     /* --------- BUTTON STYLING --------- */
 
+a {
+    display: inline-block;
+    width: 214px;  
+    text-align: center;      
+}
+
 .level-button {
     border: 3px solid var(--main-highlight);
     font: var(--main-font);
     color: var(--main-highlight);
     background-color: transparent;
     padding: 5px 10px;    
-    min-width: 100px;
-    width: calc(25% - 30px);
+    min-width: 100px;    
     border-radius: 5px;
+}
+
+.responsive-width {
+    width: calc(25% - 30px);
 }
 
 .level-button:hover {
@@ -260,11 +274,11 @@ hr {
     outline: 0;
 }
 
-.home-button {
-    width: 214px;
-    margin-top: 5px;    
+.link-button {
+    margin-top: 5px;
+    text-decoration: none;
+        
 }
-
 
 /* ----- THEME TOGGLE ------ */
 
@@ -438,6 +452,10 @@ input[type=text] {
     height: 26px;
 }
 
+.close {
+    width: 170px;
+}
+
 /* ----- FEEDBACK FORM ------ */
 
 form {
@@ -605,7 +623,7 @@ input[type=range]:focus::-ms-fill-upper {
     .game-info {
         padding-left: 20px;
         padding-right: 20px;        
-    }
+    }    
 
     #form-questions {
         width: 100%;
@@ -624,6 +642,10 @@ input[type=range]:focus::-ms-fill-upper {
     .card {
         width: 96px;    
         height: 120px;        
+    }
+
+    .level-button {
+        margin-top: 5px;
     }
 }
 
