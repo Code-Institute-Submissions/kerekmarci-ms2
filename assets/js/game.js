@@ -13,7 +13,7 @@ let moveCounter; // this will count the number of steps/attempts
 let matchCounter; // this will count the number of matching pairs during the game
 const progressBar = document.querySelector('#progress-bar');
 const username = document.getElementById('username');         // Username entered for high scores leaderboard
-let highScores = [                                          // Leaderboard default values
+let highScores = [            // Leaderboard default values
     {
         name: "Johnny Cash",
         gameLevel: "easy",
@@ -102,8 +102,7 @@ const chooseRandom = (frontFace, num = 1) => {
 };
 
 // This function displays the correct amount of cards based on easy/medium/hard level 
-function displayCards() {            
-    
+function displayCards() {         
     let card = "";
     matchCounter = 0;
     moveCounter = 0;
@@ -149,7 +148,6 @@ function flipCard() {
         document.getElementById('move-counter').innerHTML = moveCounter;
         checkForMatch();  
     }    
-
 
 function checkForMatch() {
     if (firstCard.dataset.card === secondCard.dataset.card) {
@@ -245,7 +243,7 @@ function updateProgressBar(pBar, value) {
     pBar.querySelector('.progress-text').textContent = `${value}%`;
 }
 
-// ******* MODAL *******
+// ******* MODALS *******
  
 const victoryModal = document.getElementById('victory-modal-container');
 const close = document.getElementsByClassName('close');
@@ -291,8 +289,7 @@ function saveHighScore() {
     highScores.push(score);
     highScores.sort((a, b) => {
         return a.moves - b.moves;
-    });
-    /* highScores.splice(5); // only show the top 5 */
+    });    
     localStorage.setItem("highScores", JSON.stringify(highScores));   
 }
 
