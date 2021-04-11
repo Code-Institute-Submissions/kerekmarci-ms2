@@ -1,3 +1,12 @@
+// ************ VARIABLES FOR THE GAME ************
+let level;
+let gameCards;
+let gameArea = document.getElementById('memory-game-area');
+let moveCounter; // this will count the number of steps/attempts
+let matchCounter; // this will count the number of matching pairs during the game
+const progressBar = document.querySelector('#progress-bar');
+const username = document.getElementById('username');         // Username entered for high scores leaderboard
+
 var cards;
 let isFlippedCard = false;
 let firstCard, secondCard;
@@ -6,14 +15,40 @@ let numberOfCards; // dependent on the level, this will determine how many cards
 
 // frontFace array contains all available card faces, however, not all of them are used in easy/medium games
 const frontFace = ['barkas', 'beetle', 'bmw', 'citroen', 'ferrari', 'jaguar', 'jeep', 'lada', 'lexus', 'mercedes', 'mercury', 'polski', 'porsche', 'saab', 'skoda', 'volvo', 'wartburg', 'zaporozsec']; 
-let level;
-let gameCards;
-let gameArea = document.getElementById('memory-game-area');
-let moveCounter; // this will count the number of steps/attempts
-let matchCounter; // this will count the number of matching pairs during the game
-const progressBar = document.querySelector('#progress-bar');
-const username = document.getElementById('username');         // Username entered for high scores leaderboard
-let highScores = [            // Leaderboard default values
+
+// *** Level buttons ***
+const easyButton = document.getElementById("easy");
+const mediumButton = document.getElementById("medium");
+const hardButton = document.getElementById("hard");
+
+// *** Timer variables ***
+var sec;
+var mim;
+var timer;
+var stopWatch = document.getElementById('timer');
+
+// *** Sound effects ***
+const errorSound = document.getElementById('ErrorSound');
+const matchSound = document.getElementById('MatchSound');
+const victorySound = document.getElementById('VictorySound');
+const flipSound = document.getElementById('FlipSound');
+const cardSounds = [errorSound, matchSound, victorySound, flipSound];
+
+// *** Audio buttons ***
+const soundButton = document.getElementById('volume-up');
+const muteButton = document.getElementById('volume-mute');
+const audio = document.getElementById('audio-container');
+let soundOn = true;
+
+// *** Modals ***
+const victoryModal = document.getElementById('victory-modal-container');
+const close = document.getElementsByClassName('close');
+const viewLeaderBoard = document.getElementById('view-leaderboard');
+const leaderBoard = document.getElementById('leaderboard-modal-container');
+
+// *** Leaderboard default values ***
+let table = document.getElementById('leaderboard-table');
+let highScores = [
     {
         name: "Johnny Cash",
         gameLevel: "easy",
@@ -36,7 +71,8 @@ let highScores = [            // Leaderboard default values
     },
 ];        
 
-const easyButton = document.getElementById("easy");
+// ************ GAME ************
+
 easyButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "easy");
     this.classList.add('btn-highlight'); 
@@ -46,7 +82,6 @@ easyButton.addEventListener("click", function() {
     displayCards();
 }); 
 
-const mediumButton = document.getElementById("medium");
 mediumButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "medium"); 
     this.classList.add('btn-highlight'); 
@@ -56,7 +91,6 @@ mediumButton.addEventListener("click", function() {
     displayCards(); 
 });
 
-const hardButton = document.getElementById("hard");
 hardButton.addEventListener("click", function() {
     sessionStorage.setItem("gameLevel", "hard"); 
     this.classList.add('btn-highlight');
@@ -208,25 +242,20 @@ function shuffle() {
 // ******* TIMER *******
 // Inspiration gained from: https://www.youtube.com/watch?v=oY8V6GuZrkM&t=534s (accessed 18.03.2021) 
 
-var s;
-var m;
-var timer;
-var stopWatch = document.getElementById('timer');
-
 function startTimer() {
-    s = 1;
-    m = 0;
+    sec = 1;
+    min = 0;
     if (!timer) {
         timer = setInterval(runTimer, 1000);
     }    
 }
 
 function runTimer() {
-    stopWatch.textContent = m + ":" + (s < 10 ? "0" + s : s);   
-    s++ 
-    if (s == 60) {
-        s = 0;
-        m++;
+    stopWatch.textContent = min + ":" + (sec < 10 ? "0" + sec : sec);   
+    sec++;
+    if (sec == 60) {
+        sec = 0;
+        min++;
     }
 }
 
@@ -243,17 +272,7 @@ function updateProgressBar(pBar, value) {
     pBar.querySelector('.progress-text').textContent = `${value}%`;
 }
 
-// ******* MODALS *******
- 
-const victoryModal = document.getElementById('victory-modal-container');
-const close = document.getElementsByClassName('close');
-const viewLeaderBoard = document.getElementById('view-leaderboard');
-const leaderBoard = document.getElementById('leaderboard-modal-container');
-
-
 // ******* LEADERBOARD *******
-
-let table = document.getElementById('leaderboard-table');
 
 function openLeaderBoard(event) {
     event.preventDefault();
@@ -293,7 +312,6 @@ function saveHighScore() {
     localStorage.setItem("highScores", JSON.stringify(highScores));   
 }
 
-
 function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
 }
@@ -302,20 +320,7 @@ function closeVictoryModal() {
     victoryModal.classList.remove('show');
 }
 
-// ******* SOUND EFFECTS *******
-const errorSound = document.getElementById('ErrorSound');
-const matchSound = document.getElementById('MatchSound');
-const victorySound = document.getElementById('VictorySound');
-const flipSound = document.getElementById('FlipSound');
-const cardSounds = [errorSound, matchSound, victorySound, flipSound];
-
-
 /* ----- AUDIO BUTTONS ------ */
-
-const soundButton = document.getElementById('volume-up');
-const muteButton = document.getElementById('volume-mute');
-const audio = document.getElementById('audio-container');
-let soundOn = true;
 
 audio.addEventListener('click', () => {    
     soundButton.classList.toggle('show');
