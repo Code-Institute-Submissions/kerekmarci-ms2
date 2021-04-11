@@ -282,7 +282,7 @@ a {
 
 /* ----- THEME TOGGLE ------ */
 
-.ThemeLabel {
+.theme-label {
     height: 26px;
     width: 50px;
     display: flex;
@@ -294,7 +294,7 @@ a {
     position: relative;
 }
 
-.ThemeCheckbox {
+.theme-checkbox {
     position: absolute;
     opacity: 0;
 }
@@ -318,11 +318,11 @@ a {
     transition: transform 0.2s linear; 
 }
 
-.ThemeCheckbox:checked + .ThemeLabel {
+.theme-checkbox:checked + .theme-label {
     background-color: var(--background-lighter-dark);
 }
 
-.ThemeCheckbox:checked + .ThemeLabel .ball {
+.theme-checkbox:checked + .theme-label .ball {
     transform: translateX(24px);
 }
 
