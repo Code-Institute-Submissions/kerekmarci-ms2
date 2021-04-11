@@ -92,7 +92,7 @@ The skeleton of the website is available in the below wireframes:
 
 1. [Index page](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/01Landing_page.png)
 2. [Game area](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/02Game_area.png)
-3. [Victory modal](https://github.com/kerekmarci/ms2/blob/assets/master/wireframes/03Victory.png)
+3. [Victory modal](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/03Victory.png)
 3. [Leader Board modal](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/04Leaderboard.png)
 3. [Feedback page](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/05Feedback.png)
 
