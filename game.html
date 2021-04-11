@@ -76,8 +76,8 @@
             <p>You've successfully completed this game.</p>
             <form>
                 <label for="username">Enter your name for the leaderboard:</label><br>
-                <input type="text" id="username" name="username" placeholder="Enter name here">
-                <div><button type="submit" id="view-leaderboard" class="level-button" onclick="openLeaderBoard(event)" style="width: 170px;">View Leaderboard</button></div>                      
+                <input type="text" id="username" name="username" placeholder="Enter name here" onkeyup="success()">
+                <div><button type="submit" id="view-leaderboard" class="level-button disabled" onclick="openLeaderBoard(event)" style="width: 170px;" disabled>View Leaderboard</button></div>                      
             </form>            
             <button class="close level-button" onclick="closeVictoryModal()">Close</button>
         </div>

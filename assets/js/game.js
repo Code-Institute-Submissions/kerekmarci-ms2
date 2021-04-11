@@ -274,6 +274,16 @@ function updateProgressBar(pBar, value) {
 
 // ******* LEADERBOARD *******
 
+function success() { // Determines if name input is filled and activates 'View Leaderboard' button
+    if (username.value==="") { 
+        viewLeaderBoard.disabled = true; 
+        viewLeaderBoard.classList.add('disabled');
+    } else { 
+        viewLeaderBoard.disabled = false;
+        viewLeaderBoard.classList.remove('disabled');
+    }
+}
+
 function openLeaderBoard(event) {
     event.preventDefault();
     saveHighScore();
@@ -314,6 +324,8 @@ function saveHighScore() {
 
 function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
+    viewLeaderBoard.classList.add('disabled'); // To set default disable when it next shows
+
     // Initiate a new game for the user to play again
     createLevel();
     displayCards(); 
