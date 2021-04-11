@@ -314,6 +314,9 @@ function saveHighScore() {
 
 function closeLeaderBoard() {
     leaderBoard.classList.remove('show');
+    // Initiate a new game for the user to play again
+    createLevel();
+    displayCards(); 
 }
 
 function closeVictoryModal() {
