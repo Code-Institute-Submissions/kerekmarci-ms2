@@ -90,11 +90,11 @@ The website will feature the following:
 
 The skeleton of the website is available in the below wireframes:
 
-1. [Index page](https://github.com/kerekmarci/ms2/blob/master/wireframes/01Landing_page.png)
-2. [Game area](https://github.com/kerekmarci/ms2/blob/master/wireframes/02Game_area.png)
-3. [Victory modal](https://github.com/kerekmarci/ms2/blob/master/wireframes/03Victory.png)
-3. [Leader Board modal](https://github.com/kerekmarci/ms2/blob/master/wireframes/04Leaderboard.png)
-3. [Feedback page](https://github.com/kerekmarci/ms2/blob/master/wireframes/05Feedback.png)
+1. [Index page](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/01Landing_page.png)
+2. [Game area](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/02Game_area.png)
+3. [Victory modal](https://github.com/kerekmarci/ms2/blob/assets/master/wireframes/03Victory.png)
+3. [Leader Board modal](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/04Leaderboard.png)
+3. [Feedback page](https://github.com/kerekmarci/ms2/blob/master/assets/wireframes/05Feedback.png)
 
 Due to the simplicity of the layout, for mobile view, it will remain the same just the width will be adjusted and the number of coloumns in which the cards are displayed.
 Therefore, there is no need to add a separate wireframe for mobile devices.
