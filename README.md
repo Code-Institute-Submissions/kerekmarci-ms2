@@ -350,6 +350,22 @@ In this section I would like to give credit to all these tools, sources and help
 
 ## Deployment
 
-The website was deployed to *GitHub* that is hosting the site, and is available to view at https://kerekmarci.github.io/ms2/ \
-To create a local clone, open Git Bash, type: *git clone https://github.com/kerekmarci/ms2.git* 
+### Publishing the site
 
+The website was deployed to *GitHub* that is hosting the site, and is available to view at https://kerekmarci.github.io/ms2/ \
+Deployment procedure:
+1. Visiting GitHub repository: https://github.com/kerekmarci/ms2
+2. Under *Settings* menu, *Pages* tab needs to be selected 
+3. Front the drop-down menu next to *Source,* 'master branch' needs to be selected, then *Save*
+4. Once saved, a confirmation message is shown in green: *Your site is published at https://kerekmarci.github.io/ms2/*
+
+### Cloning
+
+Here is a step-by-step guide on how to clone the repository:\
+
+1. Go to my GitHub repository - https://github.com/kerekmarci/ms2
+2. Click on the CODE button
+3. Copy the link with the HTTPS option selected
+4. Open your IDE
+5. Type git clone in the terminal, followed by pasting the link. For example: *git clone https://github.com/kerekmarci/ms2.git*
+6. Press Enter, and now a local clone has been created
